@@ -1,6 +1,6 @@
-update=Friday, April 12, 2019 at 11:57:33 AM
+update=Thursday, April 18, 2019 at 02:18:45 PM
 version=1
-last_client=kicad
+last_client=pcbnew
 [general]
 version=1
 RootSch=
@@ -23,10 +23,10 @@ AllowBlindVias=0
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
 MinTrackWidth=0.1524
-MinViaDiameter=0.4
-MinViaDrill=0.3
-MinMicroViaDiameter=0.2
-MinMicroViaDrill=0.09999999999999999
+MinViaDiameter=0.4572
+MinViaDrill=0.2032
+MinMicroViaDiameter=0.0254
+MinMicroViaDrill=0.0254
 MinHoleToHole=0.25
 TrackWidth1=0.3048
 TrackWidth2=0.2032
@@ -58,8 +58,8 @@ OthersTextSizeH=1
 OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
-SolderMaskClearance=0.0508
-SolderMaskMinWidth=0
+SolderMaskClearance=0.2032
+SolderMaskMinWidth=0.2032
 SolderPasteClearance=0
 SolderPasteRatio=-0
 [pcbnew/Netclasses]
