@@ -3,7 +3,7 @@ from sys import argv
 import pyperclip
 import xlrd
 
-xlsFile = 'BOM.xlsx'
+xlsFile = '../../manufacturing/BOM.xlsx'
 book = xlrd.open_workbook(xlsFile)
 sheetNames = book.sheet_names()
 notDataNames = []
