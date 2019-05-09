@@ -33,9 +33,9 @@ Bill of Materials
 
 CAD
 ===
-The PCB was designed using `KiCad <http://kicad-pcb.org/>`_. 
+.. figure:: images/render.png
 
-Files can be found `here <https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/CAD>`_ 
+`KiCad <http://kicad-pcb.org/>`_ design files can be found `here <https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/pcb>`_.
 
 Pinout
 ======
