@@ -20,20 +20,28 @@ Bill of Materials
 +-----+---------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 2   | 12-Port RJ45 Connector          |  :download:`5569263-1<../../manufacturing/datasheets/rj45_12port.pdf>`                      | `Digi-Key <https://www.digikey.com/products/en?keywords=5569263>`__                                                                   | 
 +-----+---------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 2   | 40-pin WBUS connector           |  :download:`DF40HC(4.0)-40DS-0.4V(70)<../../manufacturing/datasheets/40_pin_connector.pdf>` | `Digi-Key <https://www.digikey.com/product-detail/en/DF40HC(4.0)-40DS-0.4V(70)/H124604CT-ND/5155907/?itemSeq=290724516>`__            | 
+| 2   | 40-pin WBUS Connector           |  :download:`DF40HC(4.0)-40DS-0.4V(70)<../../manufacturing/datasheets/40_pin_connector.pdf>` | `Digi-Key <https://www.digikey.com/product-detail/en/DF40HC(4.0)-40DS-0.4V(70)/H124604CT-ND/5155907/?itemSeq=290724516>`__            | 
 +-----+---------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | 5V Linear Regulator             |  :download:`MC7805BDTRKG<../../manufacturing/datasheets/regulator.pdf>`                     | `Digi-Key <https://www.digikey.com/product-detail/en/on-semiconductor/MC7805BDTRKG/MC7805BDTRKGOSCT-ND/1139742>`__                    | 
+| 1   | 5V DC to DC Converter           |  :download:`R-78E5.0-1.0<../../manufacturing/datasheets/dc_converter.pdf>`                  | `Digi-Key <https://www.digikey.com/product-detail/en/on-semiconductor/MC7805BDTRKG/MC7805BDTRKGOSCT-ND/1139742>`__                    | 
 +-----+---------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 3   | Transistor Array                |  :download:`TBD62083AFNG<../../manufacturing/datasheets/transistor_array.pdf>`              | `Digi-Key <https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TBD62083AFNGEL/TBD62083AFNGELCT-ND/5514123>`__ | 
 +-----+---------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 1   | Diode                           |  :download:`MBR120VLSFT3G<../../manufacturing/datasheets/diode.pdf>`                        | `Digi-Key <https://www.digikey.com/product-detail/en/on-semiconductor/MBR120VLSFT3G/MBR120VLSFT3GOSCT-ND/3487322>`__                  | 
 +-----+---------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 2   | 1µF 25V Capacitor (1206)        |                                                                                             | `Digi-Key <https://www.digikey.com/product-detail/en/C1206C105K3RACTU/399-1255-1-ND/411530/?itemSeq=290616497>`__                     | 
+| 2   | 10µF 25V Capacitor (1206)       |                                                                                             | `Digi-Key <https://www.digikey.com/products/en?keywords=1276-1804-1-ND>`__                                                            | 
 +-----+---------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 
 CAD
 ===
 .. figure:: images/render.png
+    :align: center
+
+    Board rendering
+
+.. figure:: images/schematic.png
+    :align: center
+
+    Schematic (Right-click and open in new tab for larger view).
 
 `KiCad <http://kicad-pcb.org/>`_ design files can be found `here <https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/pcb>`_.
 
