@@ -1,6 +1,19 @@
-pyControl_DSeries.kicad_pcb-bak
-pyControl_DSeries-cache.lib
+# from https://github.com/github/gitignore/blob/master/KiCad.gitignore
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*~
+_autosave-*
+*.tmp
+*-rescue.lib
+*-save.pro
+*-save.kicad_pcb
+
+# Footprint cache
 fp-info-cache
-pyControl_DSeries.bak
+
+
 settings.json
-docs_content/build
+doc_src/build
