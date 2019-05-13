@@ -33,7 +33,7 @@ Having more pins enables the breakout to provide more behavior ports on a single
 
 
 +---------------------+-------------------------------------------------------------------+---------------------------------------------------------------------------+
-|                     | Breakout Board 1.2                                                | D-Series Breakout Board 1.1                                               |
+|                     | Breakout Board 1.2                                                | D-Series Breakout Board 1.2                                               |
 +=====================+===================================================================+===========================================================================+
 | **Microcontroller** |                                                                   |                                                                           |
 +---------------------+-------------------------------------------------------------------+---------------------------------------------------------------------------+
@@ -94,7 +94,7 @@ pyControl D-Series Breakout Resources
     border-radius:15px">View files on GitHub</a>
   </div>
   
-Continue onto the next page to see how to build and use this breakout board.
+Continue onto the next page to see information on building and using this breakout board.
 
 .. toctree::
     :hidden:

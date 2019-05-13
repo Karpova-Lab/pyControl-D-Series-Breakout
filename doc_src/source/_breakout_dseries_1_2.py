@@ -1,6 +1,6 @@
 import pyControl.hardware as _h
 
-class Breakout_D_1_1(_h.Mainboard):
+class Breakout_D_1_2(_h.Mainboard):
     def __init__(self):
         # Inputs and outputs.
         self.port_1 =  _h.Port(DIO_A='W53', DIO_B='W57', POW_A='W16', POW_B='W14', DIO_C='W61')
@@ -15,28 +15,4 @@ class Breakout_D_1_1(_h.Mainboard):
         self.port_10 = _h.Port(DIO_A='W19', DIO_B='W17', POW_A='W1',  POW_B='W3',  UART=4)
         self.port_11 = _h.Port(DIO_A='W15', DIO_B='W11', POW_A='W73', POW_B='W69', UART=2)
         self.port_12 = _h.Port(DIO_A='W54', DIO_B='W52', POW_A='W63', POW_B='W33', UART=1)
-        self.DAC_1  = 'W7'
-        self.DAC_2  = 'W6'
         self.button = 'W67'
-
-
-# class Devboard_D_1_1(Breakout_D_1_1):
-#     def __init__(self):
-#         self.set_pull_updown(
-#             {'down':[
-#                 'W53','W57','W61',
-#                 'W47','W49','W51',
-#                 'W45','W43','W74',
-#                 'W64','W62','W60',
-#                 'W58','W56',
-#                 'W50','W46',
-#                 'W59','W55','W7'
-#                 'W12','W8','W6'
-#                 'W68','W66',
-#                 'W19','W17',
-#                 'W15','W11',
-#                 'W54','W52'
-#                 ]
-#             }
-#         )
-#         super().__init__()
