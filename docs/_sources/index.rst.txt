@@ -72,6 +72,7 @@ Having more pins enables the breakout to provide more behavior ports on a single
 pyControl Resources
 -------------------
 - `Official pyControl documentation <https://pycontrol.readthedocs.io/en/latest/>`_ 
+- `pyControl Forum <https://groups.google.com/forum/#!forum/pycontrol>`_ 
 - `pyControl software repository <https://bitbucket.org/takam/pycontrol/src/default/>`_. [`Direct download <https://bitbucket.org/takam/pycontrol/downloads/>`_].
 - `pyControl hardware repository <https://bitbucket.org/takam/pycontrol_hardware/src/default/>`_. [`Direct download <https://bitbucket.org/takam/pycontrol_hardware/downloads/>`_].
 - Purchase ready to use pyControl hardware at the `Open Ephys Store <http://www.open-ephys.org/store/pycontrol-peripherals>`_ 

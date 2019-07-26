@@ -16,15 +16,17 @@ Bill of Materials
 +-----+---------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 2   | DIN Rail Adapter          |  :download:`1201578<../../manufacturing/datasheets/DIN_clip.pdf>`                           | `Digi-Key <https://www.digikey.com/products/en?keywords=277-2296-nd>`__                                                               | 
 +-----+---------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Large Button              |  :download:`B3F-4000<../../manufacturing/datasheets/tactile_switch_large.pdf>`              | `Digi-Key <https://www.digikey.com/products/en?keywords=B3F-4000>`__                                                                  | 
+| 1   | Large Button              |  :download:`TL3300DF160Q<../../manufacturing/datasheets/tactile_switch_large.pdf>`          | `Digi-Key <https://www.digikey.com/products/en?keywords=EG4906CT-ND>`__                                                               | 
 +-----+---------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 1   | Small Button              |  :download:`B3FS-1010P<../../manufacturing/datasheets/tactile_switch_small.pdf>`            | `Digi-Key <https://www.digikey.com/products/en?keywords=sw1440ct>`__                                                                  | 
++-----+---------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
+| 1   | Barrel Jack Connector     |  :download:`PJ-037A<../../manufacturing/datasheets/barrel_jack.pdf>`                        | `Digi-Key <https://www.digikey.com/products/en?keywords=CP-037A-ND>`__                                                                | 
 +-----+---------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 2   | 12-Port RJ45 Connector    |  :download:`5569263-1<../../manufacturing/datasheets/rj45_12port.pdf>`                      | `Digi-Key <https://www.digikey.com/products/en?keywords=5569263>`__                                                                   | 
 +-----+---------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 2   | 40-pin WBUS Connector     |  :download:`DF40HC(4.0)-40DS-0.4V(70)<../../manufacturing/datasheets/40_pin_connector.pdf>` | `Digi-Key <https://www.digikey.com/product-detail/en/DF40HC(4.0)-40DS-0.4V(70)/H124604CT-ND/5155907/?itemSeq=290724516>`__            | 
 +-----+---------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | 5V DC to DC Converter     |  :download:`R-78E5.0-1.0<../../manufacturing/datasheets/dc_converter.pdf>`                  | `Digi-Key <https://www.digikey.com/product-detail/en/on-semiconductor/MC7805BDTRKG/MC7805BDTRKGOSCT-ND/1139742>`__                    | 
+| 1   | 5V DC to DC Converter     |  :download:`R-78E5.0-1.0<../../manufacturing/datasheets/dc_converter.pdf>`                  | `Digi-Key <https://www.digikey.com/products/en?keywords=945-2201-ND>`__                                                               | 
 +-----+---------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 3   | Transistor Array          |  :download:`TBD62083AFNG<../../manufacturing/datasheets/transistor_array.pdf>`              | `Digi-Key <https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TBD62083AFNGEL/TBD62083AFNGELCT-ND/5514123>`__ | 
 +-----+---------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
@@ -55,14 +57,19 @@ Pinout
 ======
 Refer to the diagram below when considering where to plug in devices.
 
-.. figure:: images/karpova_modules.png
+.. figure:: images/board_front_labeled.jpg
+
+.. figure:: images/pinouts.png
+    :align: center
+
+    (Right-click and open in new tab for larger view)
 
 
 Device file
 ===========
 Here is a python device file that can be used within the pyControl framework. Place it in the ``devices/`` directory of your pyControl software. It can then be imported into a hardware definition file. 
    
-- :download:`_breakout_dseries_1_1.py <_breakout_dseries_1_2.py>` 
+- :download:`_breakout_dseries_1_3.py <_breakout_dseries_1_3.py>` 
 
 .. Example Usage
 .. =============
