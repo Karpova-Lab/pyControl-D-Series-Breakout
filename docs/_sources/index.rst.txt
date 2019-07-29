@@ -28,22 +28,22 @@ It is intended to work with the `pyControl <https://pycontrol.readthedocs.io/en/
 How is it different?
 --------------------
 
-The core distinction between this breakout board and the official `pyControl breakout board 1.2 <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12>`_  is the use of a newer generation pyBoard. Aside from being smaller, faster, and having more memory, the major benefit of using the D-Series pyBoard is having access to more I/O pins. 
+The core distinction between this breakout board and the official `pyControl breakout board 1.2 <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12>`_  is the use of a newer generation pyboard. Aside from being smaller, faster, and having more memory, the major benefit of using the D-Series pyboard is having access to more I/O pins. 
 Having more pins enables the breakout to provide more behavior ports on a single smaller PCB without the need to add a `port expander <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander>`_.
 
 
 +---------------------+-------------------------------------------------------------------+---------------------------------------------------------------------------+
-|                     | Breakout Board 1.2                                                | D-Series Breakout Board 1.2                                               |
+|                     | Breakout Board 1.2                                                | D-Series Breakout Board 1.3                                               |
 +=====================+===================================================================+===========================================================================+
 | **Microcontroller** |                                                                   |                                                                           |
 +---------------------+-------------------------------------------------------------------+---------------------------------------------------------------------------+
-| - *Board*           | `pyboard v1.1 <https://store.micropython.org/product/PYBv1.1#_>`_ | `PyBoard D-Series <https://store.micropython.org/product/PYBD-SF2-W4F2>`_ |
+| - *Board*           | `pyboard v1.1 <https://store.micropython.org/product/PYBv1.1#_>`_ | `PyBoard D-Series <https://store.micropython.org/product/PYBD-SF6-W4F2>`_ |
 +---------------------+-------------------------------------------------------------------+---------------------------------------------------------------------------+
 | - *CPU*             | 168 Mhz Cortex-M4F                                                | 216 MHz Cortex-M7F                                                        |
 +---------------------+-------------------------------------------------------------------+---------------------------------------------------------------------------+
-| - *RAM*             | 192 KB                                                            | 256 KB                                                                    |
+| - *RAM*             | 192 KB                                                            | 512 KB                                                                    |
 +---------------------+-------------------------------------------------------------------+---------------------------------------------------------------------------+
-| - *ROM*             | 512 KB                                                            | 2,512 KB                                                                  |
+| - *ROM*             | 512 KB                                                            | 4,048 KB                                                                  |
 +---------------------+-------------------------------------------------------------------+---------------------------------------------------------------------------+
 | **Connectors**      |                                                                   |                                                                           |
 +---------------------+-------------------------------------------------------------------+---------------------------------------------------------------------------+
@@ -73,10 +73,16 @@ pyControl Resources
 -------------------
 - `Official pyControl documentation <https://pycontrol.readthedocs.io/en/latest/>`_ 
 - `pyControl Forum <https://groups.google.com/forum/#!forum/pycontrol>`_ 
-- `pyControl software repository <https://bitbucket.org/takam/pycontrol/src/default/>`_. [`Direct download <https://bitbucket.org/takam/pycontrol/downloads/>`_].
-- `pyControl hardware repository <https://bitbucket.org/takam/pycontrol_hardware/src/default/>`_. [`Direct download <https://bitbucket.org/takam/pycontrol_hardware/downloads/>`_].
-- Purchase ready to use pyControl hardware at the `Open Ephys Store <http://www.open-ephys.org/store/pycontrol-peripherals>`_ 
+- `pyControl software repository <https://bitbucket.org/takam/pycontrol/src/default/>`_. [`Download Page <https://bitbucket.org/takam/pycontrol/downloads/>`_].
+- `pyControl hardware repository <https://bitbucket.org/takam/pycontrol_hardware/src/default/>`_. [`Download Page <https://bitbucket.org/takam/pycontrol_hardware/downloads/>`_].
+- Purchase ready to use pyControl hardware at the `Open Ephys Store <http://www.open-ephys.org/store>`_ 
 
+
+MicroPython and Pyboard D-Series Resources
+------------------------------------------
+- `MicroPython Documentation <http://docs.micropython.org/en/latest/>`_ 
+- `MicroPython Store <https://store.micropython.org/>`_ 
+- `Pyboard D-Series Documentation <https://pybd.io/hw/pybd_sfxw.html>`_ 
 
 pyControl D-Series Breakout Resources
 -------------------------------------
