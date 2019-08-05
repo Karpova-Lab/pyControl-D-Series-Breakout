@@ -269,7 +269,7 @@
 </div>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
-<p>Before attaching the pyboard D-series to the breakout board, connect it to your computer and create or modify the boot.py file so it contains the following code. Without this code, the pyboard will try to connecting the wrong USB port once its attached to the breakout board. <a class="reference external" href="https://pybd.io/hw/pybd_sfxw.html#usb-ports">https://pybd.io/hw/pybd_sfxw.html#usb-ports</a></p>
+<p>Before attaching the pyboard D-series to the breakout board, connect it to your computer and create or modify the boot.py file so it contains the following code. Without this code, the pyboard will try connecting to the wrong USB port once attached to the breakout board. <a class="reference external" href="https://pybd.io/hw/pybd_sfxw.html#usb-ports">https://pybd.io/hw/pybd_sfxw.html#usb-ports</a></p>
 <div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyb</span>
 <span class="n">pyb</span><span class="o">.</span><span class="n">usb_mode</span><span class="p">(</span><span class="s1">&#39;VCP+MSC&#39;</span><span class="p">,</span><span class="n">port</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -280,8 +280,33 @@
 <h2>Device file<a class="headerlink" href="#device-file" title="Permalink to this headline">¶</a></h2>
 <p>Here is a python device file that can be used within the pyControl framework. Place it in the <code class="docutils literal notranslate"><span class="pre">devices/</span></code> directory of your pyControl software. It can then be imported into a hardware definition file.</p>
 <ul class="simple">
-<li><a class="reference download internal" download="" href="_downloads/ec4b38b2db9bb8664ec2cacb4e56db76/_breakout_dseries_1_3.py"><code class="xref download docutils literal notranslate"><span class="pre">_breakout_dseries_1_3.py</span></code></a></li>
+<li><a class="reference download internal" download="" href="_downloads/38375be564a9ef66dbd39256afe55914/_breakout_dseries.py"><code class="xref download docutils literal notranslate"><span class="pre">_breakout_dseries.py</span></code></a></li>
 </ul>
+<p>Here is an example hardware definition file that could be placed in the <code class="docutils literal notranslate"><span class="pre">config/</span></code> directory.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">devices</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">pyControl.hardware</span> <span class="k">as</span> <span class="nn">_h</span>
+
+<span class="n">board</span> <span class="o">=</span> <span class="n">Breakout_dseries</span><span class="p">()</span>
+
+<span class="n">button</span>      <span class="o">=</span> <span class="n">_h</span><span class="o">.</span><span class="n">Digital_input</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">button</span><span class="p">,</span><span class="n">rising_event</span><span class="o">=</span><span class="s1">&#39;button&#39;</span><span class="p">,</span><span class="n">pull</span><span class="o">=</span><span class="s1">&#39;up&#39;</span><span class="p">)</span>
+
+<span class="c1">########## Top Row #############</span>
+<span class="n">Lpoke</span>       <span class="o">=</span> <span class="n">Nosepoke</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">port_1</span><span class="p">,</span> <span class="n">nose_event</span> <span class="o">=</span> <span class="s1">&#39;L_nose&#39;</span><span class="p">,</span> <span class="n">lick_event</span> <span class="o">=</span> <span class="s1">&#39;L_lick&#39;</span> <span class="p">)</span>
+<span class="n">Cpoke</span>       <span class="o">=</span> <span class="n">Nosepoke</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">port_2</span><span class="p">,</span> <span class="n">nose_event</span> <span class="o">=</span> <span class="s1">&#39;C_nose&#39;</span><span class="p">,)</span>
+<span class="n">Rpoke</span>       <span class="o">=</span> <span class="n">Nosepoke</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">port_3</span><span class="p">,</span> <span class="n">nose_event</span> <span class="o">=</span> <span class="s1">&#39;R_nose&#39;</span><span class="p">,</span> <span class="n">lick_event</span> <span class="o">=</span> <span class="s1">&#39;R_lick&#39;</span> <span class="p">)</span>
+<span class="n">Llever</span>      <span class="o">=</span> <span class="n">Lever_electric</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">port_4</span><span class="p">,</span> <span class="n">lever_event</span> <span class="o">=</span> <span class="s1">&#39;L_lever&#39;</span><span class="p">)</span>
+<span class="n">Rlever</span>      <span class="o">=</span> <span class="n">Lever_electric</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">port_5</span><span class="p">,</span> <span class="n">lever_event</span> <span class="o">=</span> <span class="s1">&#39;R_lever&#39;</span><span class="p">)</span>
+<span class="n">houselight</span>  <span class="o">=</span> <span class="n">_h</span><span class="o">.</span><span class="n">Digital_output</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">port_6</span><span class="o">.</span><span class="n">POW_A</span><span class="p">)</span>
+
+<span class="c1">######### Bottom Row ###########</span>
+<span class="c1"># empty port 7</span>
+<span class="n">Speakers</span>    <span class="o">=</span> <span class="n">Audio_player</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">port_8</span><span class="p">)</span>
+<span class="c1"># empty port 9</span>
+<span class="c1"># empty port 10</span>
+<span class="n">Rpump</span>       <span class="o">=</span> <span class="n">Syringe_pump</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">port_11</span><span class="p">)</span>
+<span class="n">Lpump</span>       <span class="o">=</span> <span class="n">Syringe_pump</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">port_12</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 

@@ -1,6 +1,9 @@
 import pyControl.hardware as _h
 
-class Breakout_D_1_3(_h.Mainboard):
+# for use with pyControl D-Series Breakout PCB v1.4
+# for more info visit https://karpova-lab.github.io/pyControl-D-Series-Breakout/build.html#pinout
+
+class Breakout_dseries(_h.Mainboard):
     def __init__(self):
         # Inputs and outputs.
         self.port_1 =  _h.Port(DIO_A='W53', DIO_B='W57', POW_A='W16', POW_B='W14', DIO_C='W61')

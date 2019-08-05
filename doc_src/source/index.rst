@@ -91,19 +91,7 @@ MicroPython and Pyboard D-Series Resources
 pyControl D-Series Breakout Resources
 -------------------------------------
 
-.. raw:: html
-
-  <div style=" margin-bottom:24px">
-    <a href="https://github.com/Karpova-Lab/pyControl-D-Series-Breakout" style="background-color: #2980b9;
-    border: none;
-    color: white;
-    padding: 15px 15px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    border-radius:15px">View files on GitHub</a>
-  </div>
+- `Github repository <https://github.com/Karpova-Lab/pyControl-D-Series-Breakout>`_ 
   
 Continue onto the next page to see information on building and using this breakout board.
 

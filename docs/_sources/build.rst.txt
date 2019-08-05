@@ -75,7 +75,7 @@ Refer to the diagram below when considering where to plug in devices.
 
 .. attention:: 
 
-    Before attaching the pyboard D-series to the breakout board, connect it to your computer and create or modify the boot.py file so it contains the following code. Without this code, the pyboard will try to connecting the wrong USB port once its attached to the breakout board. https://pybd.io/hw/pybd_sfxw.html#usb-ports
+    Before attaching the pyboard D-series to the breakout board, connect it to your computer and create or modify the boot.py file so it contains the following code. Without this code, the pyboard will try connecting to the wrong USB port once attached to the breakout board. https://pybd.io/hw/pybd_sfxw.html#usb-ports
     
     .. code-block:: python
     
@@ -86,33 +86,31 @@ Device file
 ===========
 Here is a python device file that can be used within the pyControl framework. Place it in the ``devices/`` directory of your pyControl software. It can then be imported into a hardware definition file. 
    
-- :download:`_breakout_dseries_1_3.py <_breakout_dseries_1_3.py>` 
+- :download:`_breakout_dseries.py <_breakout_dseries.py>` 
 
-.. Example Usage
-.. =============
-.. Here is an example hardware definition file that could be placed in the ``config/`` directory.
+Here is an example hardware definition file that could be placed in the ``config/`` directory.
 
-.. .. code:: python
+.. code:: python
 
-..     from devices import *
-..     import pyControl.hardware as _h
+    from devices import *
+    import pyControl.hardware as _h
 
-..     board = Breakout_D_1_1()
+    board = Breakout_dseries()
 
-..     # Instantiate Devices.
-..     button      = _h.Digital_input(board.button,rising_event='button',pull='up')
-..     # Top Row
-..     Lpoke       = TazPoke(board.port_1, nose_event = 'L_nose', lick_event = 'L_lick' )
-..     Cpoke       = TazPoke(board.port_2, nose_event = 'C_nose',)
-..     Rpoke       = TazPoke(board.port_3, nose_event = 'R_nose', lick_event = 'R_lick' )
-..     Llever      = TazLever(board.port_4, lever_event = 'L_lever')
-..     Rlever      = TazLever(board.port_5, lever_event = 'R_lever')
-..     houselight  = _h.Digital_output(board.port_6.POW_A)
+    button      = _h.Digital_input(board.button,rising_event='button',pull='up')
 
-..     # Bottom Row
-..     Lspeaker    = Audio_board(board.port_7)
-..     # Rspeaker    = Audio_board(board.port_8)
-..     # empty
-..     # BaseStation = (board.port_10) 
-..     Lpump       = TazPump(board.port_11)
-..     Rpump       = TazPump(board.port_12)
+    ########## Top Row #############
+    Lpoke       = Nosepoke(board.port_1, nose_event = 'L_nose', lick_event = 'L_lick' )
+    Cpoke       = Nosepoke(board.port_2, nose_event = 'C_nose',)
+    Rpoke       = Nosepoke(board.port_3, nose_event = 'R_nose', lick_event = 'R_lick' )
+    Llever      = Lever_electric(board.port_4, lever_event = 'L_lever')
+    Rlever      = Lever_electric(board.port_5, lever_event = 'R_lever')
+    houselight  = _h.Digital_output(board.port_6.POW_A)
+
+    ######### Bottom Row ###########
+    # empty port 7
+    Speakers    = Audio_player(board.port_8)
+    # empty port 9
+    # empty port 10
+    Rpump       = Syringe_pump(board.port_11)
+    Lpump       = Syringe_pump(board.port_12)
