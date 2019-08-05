@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "pyControl D-Series Breakout"
-Date "2019-07-26"
-Rev "1.3"
+Date "2019-08-05"
+Rev "1.4"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -36,45 +36,9 @@ Wire Wire Line
 Wire Wire Line
 	1000 2850 1100 2850
 Connection ~ 1000 2950
-Wire Wire Line
-	1650 950  1650 850 
-Wire Wire Line
-	1650 850  1750 850 
 Text Label 1000 2850 2    50   ~ 0
 VIN
-Wire Wire Line
-	1750 850  1750 950 
-Wire Wire Line
-	1750 850  1850 850 
-Wire Wire Line
-	1850 850  1850 950 
-Connection ~ 1750 850 
-Wire Wire Line
-	1850 850  1950 850 
-Wire Wire Line
-	1950 850  1950 950 
-Connection ~ 1850 850 
-Wire Wire Line
-	3950 850  4050 850 
-Wire Wire Line
-	4050 850  4050 950 
-Wire Wire Line
-	3950 850  3950 950 
-Wire Wire Line
-	4200 950  4200 850 
-Wire Wire Line
-	4200 850  4050 850 
-Connection ~ 4050 850 
-Wire Wire Line
-	4300 950  4300 850 
-Wire Wire Line
-	4300 850  4200 850 
-Connection ~ 4200 850 
 Text Label 2550 2900 0    50   ~ 0
-GND
-Text Label 1900 850  0    50   ~ 0
-GND
-Text Label 4300 850  0    50   ~ 0
 GND
 Wire Wire Line
 	3500 1150 3450 1150
@@ -540,8 +504,6 @@ Wire Wire Line
 	2550 2550 2500 2550
 Wire Wire Line
 	2550 2750 2500 2750
-Wire Wire Line
-	4750 2750 5050 2750
 Wire Wire Line
 	8450 1850 8450 1900
 Wire Wire Line
@@ -1147,15 +1109,7 @@ Connection ~ 6300 1250
 Wire Wire Line
 	5400 1450 5100 1450
 Wire Wire Line
-	5100 1450 5100 1550
-Wire Wire Line
-	5100 1550 4750 1550
-Wire Wire Line
-	5400 1550 5200 1550
-Wire Wire Line
-	5200 1550 5200 1650
-Wire Wire Line
-	5200 1650 4750 1650
+	5400 1550 4750 1550
 $Comp
 L asl_symbols:Hirose_40_pin_connector X2U1
 U 1 1 5D3C2F6B
@@ -1203,9 +1157,12 @@ F 1 "B3FS-1010P" H 5350 2600 50  0000 C CNN
 F 2 "asl_footprints:6mm_tactile_smd" H 5200 2700 50  0001 C CNN
 F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf" H 5200 2700 50  0001 C CNN
 	1    5350 2800
-	-1   0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5050 2850 5050 2750
-Connection ~ 5050 2750
+	4750 2750 5050 2750
+Wire Wire Line
+	5100 1450 5100 1650
+Wire Wire Line
+	5100 1650 4750 1650
 $EndSCHEMATC

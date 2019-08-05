@@ -12,7 +12,7 @@ Bill of Materials
 +-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | Qty | Description                 | Datasheet                                                                                   | Order Link                                                                                                                            | 
 +=====+=============================+=============================================================================================+=======================================================================================================================================+
-| 1   | Printed Circuit Board       |  :download:`pyControl D-Series Breakout 1.2<../../manufacturing/datasheets/breakout.pdf>`   | `OSH Park <https://oshpark.com/shared_projects/J8Bqlr2I>`__                                                                           | 
+| 1   | Printed Circuit Board       |  :download:`pyControl D-Series Breakout 1.4<../../manufacturing/datasheets/breakout.pdf>`   | `OSH Park <https://oshpark.com/shared_projects/qB3NMaHN>`__                                                                           | 
 +-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 2   | DIN Rail Adapter            |  :download:`1201578<../../manufacturing/datasheets/DIN_clip.pdf>`                           | `Digi-Key <https://www.digikey.com/products/en?keywords=277-2296-nd>`__                                                               | 
 +-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
@@ -22,7 +22,7 @@ Bill of Materials
 +-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 1   | Barrel Jack Connector       |  :download:`PJ-037A<../../manufacturing/datasheets/barrel_jack.pdf>`                        | `Digi-Key <https://www.digikey.com/products/en?keywords=CP-037A-ND>`__                                                                | 
 +-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 2   | 12-Port RJ45 Connector      |  :download:`5569263-1<../../manufacturing/datasheets/rj45_12port.pdf>`                      | `Digi-Key <https://www.digikey.com/products/en?keywords=5569263>`__                                                                   | 
+| 1   | 12-Port RJ45 Connector      |  :download:`5569263-1<../../manufacturing/datasheets/rj45_12port.pdf>`                      | `Digi-Key <https://www.digikey.com/products/en?keywords=5569263>`__                                                                   | 
 +-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 | 2   | 40-pin WBUS Connector       |  :download:`DF40HC(4.0)-40DS-0.4V(70)<../../manufacturing/datasheets/40_pin_connector.pdf>` | `Digi-Key <https://www.digikey.com/product-detail/en/DF40HC(4.0)-40DS-0.4V(70)/H124604CT-ND/5155907/?itemSeq=290724516>`__            | 
 +-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
@@ -39,6 +39,13 @@ Bill of Materials
 
 
 .. BOM end
+
+.. raw:: html
+    :file:`pyControl_DSeries_1.4.html` 
+
+- :download:`Interactive BOM (right click and open in new tab) <pyControl_DSeries_1.4.html>` 
+
+ 
 
 CAD
 ===
@@ -66,6 +73,14 @@ Refer to the diagram below when considering where to plug in devices.
 
     (Right-click and open in new tab for larger view)
 
+.. attention:: 
+
+    Before attaching the pyboard D-series to the breakout board, connect it to your computer and create or modify the boot.py file so it contains the following code. Without this code, the pyboard will try to connecting the wrong USB port once its attached to the breakout board. https://pybd.io/hw/pybd_sfxw.html#usb-ports
+    
+    .. code-block:: python
+    
+        import pyb
+        pyb.usb_mode('VCP+MSC',port=1)
 
 Device file
 ===========
