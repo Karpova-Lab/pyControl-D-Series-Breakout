@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'D-Series Breakout'
+project = 'D-series Breakout'
 copyright = '2019, Andy Lustig'
 author = 'Andy Lustig'
 
@@ -88,7 +88,7 @@ html_last_updated_fmt = '%b %d, %Y'
 # documentation.
 #
 html_theme_options = {
-    'collapse_navigation': True,
+    'collapse_navigation': False,
 	'display_version': False,
 	'prev_next_buttons_location': 'both',
     'includehidden':True

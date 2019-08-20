@@ -102,7 +102,7 @@ outputString += printDivider(widths) #final divider
 
 
 # Figure out where to place BOM
-rstFiles = ['build.rst']
+rstFiles = ['index.rst']
 relative_path_to_BOM = makeChoice('Where to place BOM?',rstFiles)
 
 
