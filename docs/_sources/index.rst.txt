@@ -23,12 +23,21 @@ What is this?
 -------------
 
 pyControl D-series breakout is a PCB that connects a  `pyboard D-series microcontoller <https://pybd.io/hw/pybd_sfxw.html>`_  with twelve RJ45 ports. 
-It is intended to work with the `pyControl <https://pycontrol.readthedocs.io/en/latest/>`_ behavior control framework by using a microcontroller running `Micropython <https://micropython.org/>`_  and having the RJ45 connections that are pin compatible with `pyControl Devices <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-boards>`_.
+It is intended to be used with the `pyControl <https://pycontrol.readthedocs.io/en/latest/>`_ behavioral experiment control framework.
+It accomplishes by using a microcontroller running `Micropython <https://micropython.org/>`_  and having the RJ45 connections that are pin compatible with `pyControl Devices <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-boards>`_.
 
 How is it different?
 --------------------
 
-The core distinction between this breakout board and the official `pyControl breakout board 1.2 <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12>`_  is the use of a newer generation pyboard. Aside from being smaller, faster, and having more memory, the major benefit of using the D-series pyboard is having access to more I/O pins. 
+
+.. figure:: images/side_by_side.jpg
+    :align: center
+
+    pyControl Breakout Board 1.2 (left) and D-series Breakout 1.4 (right)
+
+
+The core distinction between this breakout board and the official `pyControl breakout board 1.2 <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12>`_  is the use of a newer generation pyboard. 
+Some benefits of the newer pyboard include being smaller, faster, having more memory, and having more I/O pins.
 Having more pins enables the breakout to provide more behavior ports on a single smaller PCB without the need to add a `port expander <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander>`_.
 
 
@@ -74,61 +83,48 @@ Having more pins enables the breakout to provide more behavior ports on a single
 
 
 
-Bill of Materials
------------------
-:download:`Interactive BOM (right click and open in new tab) <pyControl_DSeries_1.4.html>` 
+Getting Started
+---------------
 
-.. BOM start
+What to Get
++++++++++++
 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| Qty | Description                 | Datasheet                                                                                   | Order Link                                                                                                                            | 
-+=====+=============================+=============================================================================================+=======================================================================================================================================+
-| 1   | Printed Circuit Board       |  :download:`pyControl D-Series Breakout 1.4<../../manufacturing/datasheets/breakout.pdf>`   | `OSH Park <https://oshpark.com/shared_projects/qB3NMaHN>`__                                                                           | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 2   | DIN Rail Adapter            |  :download:`1201578<../../manufacturing/datasheets/DIN_clip.pdf>`                           | `Digi-Key <https://www.digikey.com/products/en?keywords=277-2296-nd>`__                                                               | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Large Button                |  :download:`TL3300DF160Q<../../manufacturing/datasheets/tactile_switch_large.pdf>`          | `Digi-Key <https://www.digikey.com/products/en?keywords=EG4906CT-ND>`__                                                               | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Small Button                |  :download:`B3FS-1010P<../../manufacturing/datasheets/tactile_switch_small.pdf>`            | `Digi-Key <https://www.digikey.com/products/en?keywords=sw1440ct>`__                                                                  | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Barrel Jack Connector       |  :download:`PJ-037A<../../manufacturing/datasheets/barrel_jack.pdf>`                        | `Digi-Key <https://www.digikey.com/products/en?keywords=CP-037A-ND>`__                                                                | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | 12-Port RJ45 Connector      |  :download:`5569263-1<../../manufacturing/datasheets/rj45_12port.pdf>`                      | `Digi-Key <https://www.digikey.com/products/en?keywords=5569263>`__                                                                   | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 2   | 40-pin WBUS Connector       |  :download:`DF40HC(4.0)-40DS-0.4V(70)<../../manufacturing/datasheets/40_pin_connector.pdf>` | `Digi-Key <https://www.digikey.com/product-detail/en/DF40HC(4.0)-40DS-0.4V(70)/H124604CT-ND/5155907/?itemSeq=290724516>`__            | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Micro USB horizontal socket |  :download:`10118194-0001LF<../../manufacturing/datasheets/horz_µUSB.pdf>`                  | `Digi-Key <https://www.digikey.com/products/en?keywords=609-4618-1-ND>`__                                                             | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | 5V DC to DC Converter       |  :download:`R-78E5.0-1.0<../../manufacturing/datasheets/dc_converter.pdf>`                  | `Digi-Key <https://www.digikey.com/products/en?keywords=945-2201-ND>`__                                                               | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 3   | Transistor Array            |  :download:`TBD62083AFNG<../../manufacturing/datasheets/transistor_array.pdf>`              | `Digi-Key <https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TBD62083AFNGEL/TBD62083AFNGELCT-ND/5514123>`__ | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Diode                       |  :download:`MBR120VLSFT3G<../../manufacturing/datasheets/diode.pdf>`                        | `Digi-Key <https://www.digikey.com/product-detail/en/on-semiconductor/MBR120VLSFT3G/MBR120VLSFT3GOSCT-ND/3487322>`__                  | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-| 2   | 10µF 25V Capacitor (1206)   |                                                                                             | `Digi-Key <https://www.digikey.com/products/en?keywords=1276-1804-1-ND>`__                                                            | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| Qty | Description                      | Order Link                                                             | Required |
++=====+==================================+========================================================================+==========+
+| 1   | D-series Breakout Board          | `Build your own <build_section_>`_                                     | Yes      |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 1   | pyboard D-series Microcontroller | `Micropython <https://store.micropython.org/product/PYBD-SF6-W4F2>`_   | Yes      |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 1   | 12V DC Power Supply              | `Digi-Key <https://www.digikey.com/products/en?keywords=102-3631-ND>`_ | Yes      |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 1   | USB cable                        | `Digi-Key <https://www.digikey.com/products/en?keywords=380-1431-ND>`_ | Yes      |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 1   | DIN Rail                         | `Digi-Key <https://www.digikey.com/short/prn3bb>`_                     |          |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 2   | DIN Rail Adapter                 | `Digi-Key <https://www.digikey.com/products/en?keywords=277-2296-nd>`_ |          |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 4   | M3 screws                        | `Digi-Key <https://www.digikey.com/products/en?keywords=335-1156-ND>`_ |          |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
 
+Setup
++++++
+.. attention:: 
 
-.. BOM end
+    Before attaching the pyboard D-series to the breakout board, connect it directly to your computer and create/modify the **boot.py** file so it contains the following code:
+    
+    .. code-block:: python
+    
+        import pyb
+        pyb.usb_mode('VCP+MSC',port=1
 
+    This change to **boot.py** is required, otherwise the pyboard won't be found by the pyControl software when it is connected to the breakout board! https://pybd.io/hw/pybd_sfxw.html#usb-ports
 
-CAD
----
+Follow instructions `here <https://pycontrol.readthedocs.io/en/latest/#getting-started>`_ to get started with using the pyControl software.
 
-.. figure:: images/render.png
-    :align: center
-
-    Board rendering
-
-.. figure:: images/schematic.png
-    :align: center
-
-    Schematic (Right-click and open in new tab for larger view).
-
-`KiCad <http://kicad-pcb.org/>`_ design files can be found `here <https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/pcb>`_.
 
 Pinout
-------
+++++++
 Refer to the diagram below when considering where to plug in devices.
 
 .. figure:: images/board_front_labeled.jpg
@@ -138,17 +134,9 @@ Refer to the diagram below when considering where to plug in devices.
 
     (Right-click and open in new tab for larger view)
 
-.. attention:: 
-
-    Before attaching the pyboard D-series to the breakout board, connect it to your computer and create or modify the boot.py file so it contains the following code. Without this code, the pyboard will try connecting to the wrong USB port once attached to the breakout board. https://pybd.io/hw/pybd_sfxw.html#usb-ports
-    
-    .. code-block:: python
-    
-        import pyb
-        pyb.usb_mode('VCP+MSC',port=1)
 
 Device file
------------
++++++++++++
 Here is a python device file that can be used within the pyControl framework. Place it in the ``devices/`` directory of your pyControl software. It can then be imported into a hardware definition file. 
    
 - :download:`_breakout_dseries.py <_breakout_dseries.py>` 
@@ -181,6 +169,60 @@ Here is an example hardware definition file that could be placed in the ``config
     Lpump       = Syringe_pump(board.port_12)
 
 
+.. _build_section:
+
+Building One
+------------
+
+Bill of Materials
++++++++++++++++++
+
+.. BOM start
+
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Qty | Description                 | Datasheet                                                                                   | Order Link                                                                                                                           | 
++=====+=============================+=============================================================================================+======================================================================================================================================+
+| 1   | Printed Circuit Board       |  :download:`pyControl D-Series Breakout 1.4<../../manufacturing/datasheets/breakout.pdf>`   | `OSH Park <https://oshpark.com/shared_projects/qB3NMaHN>`_                                                                           | 
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| 1   | Large Button                |  :download:`TL3300DF160Q<../../manufacturing/datasheets/tactile_switch_large.pdf>`          | `Digi-Key <https://www.digikey.com/products/en?keywords=EG4906CT-ND>`_                                                               | 
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| 1   | Small Button                |  :download:`B3FS-1010P<../../manufacturing/datasheets/tactile_switch_small.pdf>`            | `Digi-Key <https://www.digikey.com/products/en?keywords=sw1440ct>`_                                                                  | 
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| 1   | Barrel Jack Connector       |  :download:`PJ-037A<../../manufacturing/datasheets/barrel_jack.pdf>`                        | `Digi-Key <https://www.digikey.com/products/en?keywords=CP-037A-ND>`_                                                                | 
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| 2   | 12-Port RJ45 Connector      |  :download:`5569263-1<../../manufacturing/datasheets/rj45_12port.pdf>`                      | `Digi-Key <https://www.digikey.com/products/en?keywords=5569263>`_                                                                   | 
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| 2   | 40-pin WBUS Connector       |  :download:`DF40HC(4.0)-40DS-0.4V(70)<../../manufacturing/datasheets/40_pin_connector.pdf>` | `Digi-Key <https://www.digikey.com/product-detail/en/DF40HC(4.0)-40DS-0.4V(70)/H124604CT-ND/5155907/?itemSeq=290724516>`_            | 
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| 1   | Micro USB horizontal socket |  :download:`10118194-0001LF<../../manufacturing/datasheets/horz_µUSB.pdf>`                  | `Digi-Key <https://www.digikey.com/products/en?keywords=609-4618-1-ND>`_                                                             | 
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| 1   | 5V DC to DC Converter       |  :download:`R-78E5.0-1.0<../../manufacturing/datasheets/dc_converter.pdf>`                  | `Digi-Key <https://www.digikey.com/products/en?keywords=945-2201-ND>`_                                                               | 
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| 3   | Transistor Array            |  :download:`TBD62083AFNG<../../manufacturing/datasheets/transistor_array.pdf>`              | `Digi-Key <https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TBD62083AFNGEL/TBD62083AFNGELCT-ND/5514123>`_ | 
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| 1   | Diode                       |  :download:`MBR120VLSFT3G<../../manufacturing/datasheets/diode.pdf>`                        | `Digi-Key <https://www.digikey.com/product-detail/en/on-semiconductor/MBR120VLSFT3G/MBR120VLSFT3GOSCT-ND/3487322>`_                  | 
++-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+
+
+.. BOM end
+
+
+CAD
++++
+
+- `KiCad <http://kicad-pcb.org/>`_ design files can be found `here <https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/pcb>`_.
+- :download:`Interactive BOM (right click and open in new tab) <pyControl_DSeries_1.4.html>` 
+
+.. figure:: images/render.png
+    :align: center
+
+    Board rendering
+
+.. figure:: images/schematic.png
+    :align: center
+
+    Schematic (Right-click and open in new tab for larger view).
+
 Further Resources
 -----------------
 pyControl 
@@ -202,7 +244,6 @@ pyControl D-series Breakout
 +++++++++++++++++++++++++++
 
 - `Github repository <https://github.com/Karpova-Lab/pyControl-D-series-Breakout>`_ 
-  
 
 .. toctree::
     :hidden:

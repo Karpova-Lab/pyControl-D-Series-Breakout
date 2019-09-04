@@ -79,14 +79,22 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">pyControl D-series Breakout</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-this">What is this?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-is-it-different">How is it different?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bill-of-materials">Bill of Materials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cad">CAD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pinout">Pinout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#device-file">Device file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-to-get">What to Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pinout">Pinout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#device-file">Device file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-one">Building One</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bill-of-materials">Bill of Materials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cad">CAD</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#further-resources">Further Resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">pyControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">pyControl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#micropython-and-pyboard-d-series">MicroPython and Pyboard D-series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">pyControl D-series Breakout</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="#id18">pyControl D-series Breakout</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -148,7 +156,7 @@
             
             
               <!-- User defined GitHub URL -->
-              <a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout" class="fa fa-github"> View GitHub Repo</a>
             
           
         
@@ -164,22 +172,28 @@
             
   <div class="section" id="pycontrol-d-series-breakout">
 <h1>pyControl D-series Breakout<a class="headerlink" href="#pycontrol-d-series-breakout" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id19">
 <img alt="_images/board_iso.jpg" src="_images/board_iso.jpg" />
 <p class="caption"><span class="caption-text">pyControl D-series Breakout clipped onto <a class="reference external" href="https://en.wikipedia.org/wiki/DIN_rail">DIN rail</a></span></p>
 </div>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id20">
 <img alt="_images/board_top.jpg" src="_images/board_top.jpg" />
 <p class="caption"><span class="caption-text">Top view</span></p>
 </div>
 <div class="section" id="what-is-this">
 <h2>What is this?<a class="headerlink" href="#what-is-this" title="Permalink to this headline">¶</a></h2>
 <p>pyControl D-series breakout is a PCB that connects a  <a class="reference external" href="https://pybd.io/hw/pybd_sfxw.html">pyboard D-series microcontoller</a>  with twelve RJ45 ports.
-It is intended to work with the <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/">pyControl</a> behavior control framework by using a microcontroller running <a class="reference external" href="https://micropython.org/">Micropython</a>  and having the RJ45 connections that are pin compatible with <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-boards">pyControl Devices</a>.</p>
+It is intended to be used with the <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/">pyControl</a> behavioral experiment control framework.
+It accomplishes by using a microcontroller running <a class="reference external" href="https://micropython.org/">Micropython</a>  and having the RJ45 connections that are pin compatible with <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-boards">pyControl Devices</a>.</p>
 </div>
 <div class="section" id="how-is-it-different">
 <h2>How is it different?<a class="headerlink" href="#how-is-it-different" title="Permalink to this headline">¶</a></h2>
-<p>The core distinction between this breakout board and the official <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12">pyControl breakout board 1.2</a>  is the use of a newer generation pyboard. Aside from being smaller, faster, and having more memory, the major benefit of using the D-series pyboard is having access to more I/O pins.
+<div class="figure align-center" id="id21">
+<img alt="_images/side_by_side.jpg" src="_images/side_by_side.jpg" />
+<p class="caption"><span class="caption-text">pyControl Breakout Board 1.2 (left) and D-series Breakout 1.4 (right)</span></p>
+</div>
+<p>The core distinction between this breakout board and the official <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12">pyControl breakout board 1.2</a>  is the use of a newer generation pyboard.
+Some benefits of the newer pyboard include being smaller, faster, having more memory, and having more I/O pins.
 Having more pins enables the breakout to provide more behavior ports on a single smaller PCB without the need to add a <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander">port expander</a>.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -308,120 +322,89 @@ Having more pins enables the breakout to provide more behavior ports on a single
 </tbody>
 </table>
 </div>
-<div class="section" id="bill-of-materials">
-<h2>Bill of Materials<a class="headerlink" href="#bill-of-materials" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference download internal" download="" href="_downloads/64dc2fb80e2450c333741cd137ba31d0/pyControl_DSeries_1.4.html"><code class="xref download docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">BOM</span> <span class="pre">(right</span> <span class="pre">click</span> <span class="pre">and</span> <span class="pre">open</span> <span class="pre">in</span> <span class="pre">new</span> <span class="pre">tab)</span></code></a></p>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-to-get">
+<h3>What to Get<a class="headerlink" href="#what-to-get" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="2%" />
-<col width="11%" />
-<col width="35%" />
-<col width="52%" />
+<col width="4%" />
+<col width="28%" />
+<col width="60%" />
+<col width="8%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Qty</th>
 <th class="head">Description</th>
-<th class="head">Datasheet</th>
 <th class="head">Order Link</th>
+<th class="head">Required</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>1</td>
-<td>Printed Circuit Board</td>
-<td><a class="reference download internal" download="" href="_downloads/05fc5b51e618ba3e7613217b69a9a168/breakout.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pyControl</span> <span class="pre">D-Series</span> <span class="pre">Breakout</span> <span class="pre">1.4</span></code></a></td>
-<td><a class="reference external" href="https://oshpark.com/shared_projects/qB3NMaHN">OSH Park</a></td>
+<td>D-series Breakout Board</td>
+<td><a class="reference internal" href="#build-section">Build your own</a></td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>pyboard D-series Microcontroller</td>
+<td><a class="reference external" href="https://store.micropython.org/product/PYBD-SF6-W4F2">Micropython</a></td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>12V DC Power Supply</td>
+<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=102-3631-ND">Digi-Key</a></td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>USB cable</td>
+<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=380-1431-ND">Digi-Key</a></td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>DIN Rail</td>
+<td><a class="reference external" href="https://www.digikey.com/short/prn3bb">Digi-Key</a></td>
+<td>&#160;</td>
 </tr>
 <tr class="row-odd"><td>2</td>
 <td>DIN Rail Adapter</td>
-<td><a class="reference download internal" download="" href="_downloads/fbe9b6169c6dcc34d75baabee165b8c6/DIN_clip.pdf"><code class="xref download docutils literal notranslate"><span class="pre">1201578</span></code></a></td>
 <td><a class="reference external" href="https://www.digikey.com/products/en?keywords=277-2296-nd">Digi-Key</a></td>
-</tr>
-<tr class="row-even"><td>1</td>
-<td>Large Button</td>
-<td><a class="reference download internal" download="" href="_downloads/88949580b56cdc0146622eb8099ddeb2/tactile_switch_large.pdf"><code class="xref download docutils literal notranslate"><span class="pre">TL3300DF160Q</span></code></a></td>
-<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=EG4906CT-ND">Digi-Key</a></td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>Small Button</td>
-<td><a class="reference download internal" download="" href="_downloads/c2e8790bfcef6a6796a49d7ea6920921/tactile_switch_small.pdf"><code class="xref download docutils literal notranslate"><span class="pre">B3FS-1010P</span></code></a></td>
-<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=sw1440ct">Digi-Key</a></td>
-</tr>
-<tr class="row-even"><td>1</td>
-<td>Barrel Jack Connector</td>
-<td><a class="reference download internal" download="" href="_downloads/d0c7a1a533782b02083cc73e7bac89d0/barrel_jack.pdf"><code class="xref download docutils literal notranslate"><span class="pre">PJ-037A</span></code></a></td>
-<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=CP-037A-ND">Digi-Key</a></td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>12-Port RJ45 Connector</td>
-<td><a class="reference download internal" download="" href="_downloads/f496dc1a2aee66af3606e6931598609b/rj45_12port.pdf"><code class="xref download docutils literal notranslate"><span class="pre">5569263-1</span></code></a></td>
-<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=5569263">Digi-Key</a></td>
-</tr>
-<tr class="row-even"><td>2</td>
-<td>40-pin WBUS Connector</td>
-<td><a class="reference download internal" download="" href="_downloads/4042c6afceabcb33edaafbe80300ba14/40_pin_connector.pdf"><code class="xref download docutils literal notranslate"><span class="pre">DF40HC(4.0)-40DS-0.4V(70)</span></code></a></td>
-<td><a class="reference external" href="https://www.digikey.com/product-detail/en/DF40HC(4.0)-40DS-0.4V(70)/H124604CT-ND/5155907/?itemSeq=290724516">Digi-Key</a></td>
-</tr>
-<tr class="row-odd"><td>1</td>
-<td>Micro USB horizontal socket</td>
-<td><a class="reference download internal" download="" href="_downloads/a51acace92212f3c3c20b808453d1f54/horz_µUSB.pdf"><code class="xref download docutils literal notranslate"><span class="pre">10118194-0001LF</span></code></a></td>
-<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=609-4618-1-ND">Digi-Key</a></td>
-</tr>
-<tr class="row-even"><td>1</td>
-<td>5V DC to DC Converter</td>
-<td><a class="reference download internal" download="" href="_downloads/0fbf5ef5bdba838399a8ea50cdb4b8f5/dc_converter.pdf"><code class="xref download docutils literal notranslate"><span class="pre">R-78E5.0-1.0</span></code></a></td>
-<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=945-2201-ND">Digi-Key</a></td>
-</tr>
-<tr class="row-odd"><td>3</td>
-<td>Transistor Array</td>
-<td><a class="reference download internal" download="" href="_downloads/09f1ce16ef1d38b37123e24ac85f93fb/transistor_array.pdf"><code class="xref download docutils literal notranslate"><span class="pre">TBD62083AFNG</span></code></a></td>
-<td><a class="reference external" href="https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TBD62083AFNGEL/TBD62083AFNGELCT-ND/5514123">Digi-Key</a></td>
-</tr>
-<tr class="row-even"><td>1</td>
-<td>Diode</td>
-<td><a class="reference download internal" download="" href="_downloads/58b6b6dcb736e90c232d33a65b598c9b/diode.pdf"><code class="xref download docutils literal notranslate"><span class="pre">MBR120VLSFT3G</span></code></a></td>
-<td><a class="reference external" href="https://www.digikey.com/product-detail/en/on-semiconductor/MBR120VLSFT3G/MBR120VLSFT3GOSCT-ND/3487322">Digi-Key</a></td>
-</tr>
-<tr class="row-odd"><td>2</td>
-<td>10µF 25V Capacitor (1206)</td>
 <td>&#160;</td>
-<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=1276-1804-1-ND">Digi-Key</a></td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>M3 screws</td>
+<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=335-1156-ND">Digi-Key</a></td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="cad">
-<h2>CAD<a class="headerlink" href="#cad" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id6">
-<img alt="_images/render.png" src="_images/render.png" />
-<p class="caption"><span class="caption-text">Board rendering</span></p>
+<div class="section" id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p>Before attaching the pyboard D-series to the breakout board, connect it directly to your computer and create/modify the <strong>boot.py</strong> file so it contains the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyb</span>
+<span class="n">pyb</span><span class="o">.</span><span class="n">usb_mode</span><span class="p">(</span><span class="s1">&#39;VCP+MSC&#39;</span><span class="p">,</span><span class="n">port</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
 </div>
-<div class="figure align-center" id="id7">
-<img alt="_images/schematic.png" src="_images/schematic.png" />
-<p class="caption"><span class="caption-text">Schematic (Right-click and open in new tab for larger view).</span></p>
+<p class="last">This change to <strong>boot.py</strong> is required, otherwise the pyboard won’t be found by the pyControl software when it is connected to the breakout board! <a class="reference external" href="https://pybd.io/hw/pybd_sfxw.html#usb-ports">https://pybd.io/hw/pybd_sfxw.html#usb-ports</a></p>
 </div>
-<p><a class="reference external" href="http://kicad-pcb.org/">KiCad</a> design files can be found <a class="reference external" href="https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/pcb">here</a>.</p>
+<p>Follow instructions <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/#getting-started">here</a> to get started with using the pyControl software.</p>
 </div>
 <div class="section" id="pinout">
-<h2>Pinout<a class="headerlink" href="#pinout" title="Permalink to this headline">¶</a></h2>
+<h3>Pinout<a class="headerlink" href="#pinout" title="Permalink to this headline">¶</a></h3>
 <p>Refer to the diagram below when considering where to plug in devices.</p>
 <div class="figure">
 <img alt="_images/board_front_labeled.jpg" src="_images/board_front_labeled.jpg" />
 </div>
-<div class="figure align-center" id="id8">
+<div class="figure align-center" id="id22">
 <img alt="_images/pinouts.png" src="_images/pinouts.png" />
 <p class="caption"><span class="caption-text">(Right-click and open in new tab for larger view)</span></p>
 </div>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p>Before attaching the pyboard D-series to the breakout board, connect it to your computer and create or modify the boot.py file so it contains the following code. Without this code, the pyboard will try connecting to the wrong USB port once attached to the breakout board. <a class="reference external" href="https://pybd.io/hw/pybd_sfxw.html#usb-ports">https://pybd.io/hw/pybd_sfxw.html#usb-ports</a></p>
-<div class="last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyb</span>
-<span class="n">pyb</span><span class="o">.</span><span class="n">usb_mode</span><span class="p">(</span><span class="s1">&#39;VCP+MSC&#39;</span><span class="p">,</span><span class="n">port</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="device-file">
-<h2>Device file<a class="headerlink" href="#device-file" title="Permalink to this headline">¶</a></h2>
+<h3>Device file<a class="headerlink" href="#device-file" title="Permalink to this headline">¶</a></h3>
 <p>Here is a python device file that can be used within the pyControl framework. Place it in the <code class="docutils literal notranslate"><span class="pre">devices/</span></code> directory of your pyControl software. It can then be imported into a hardware definition file.</p>
 <ul class="simple">
 <li><a class="reference download internal" download="" href="_downloads/38375be564a9ef66dbd39256afe55914/_breakout_dseries.py"><code class="xref download docutils literal notranslate"><span class="pre">_breakout_dseries.py</span></code></a></li>
@@ -452,10 +435,99 @@ Having more pins enables the breakout to provide more behavior ports on a single
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="building-one">
+<span id="build-section"></span><h2>Building One<a class="headerlink" href="#building-one" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bill-of-materials">
+<h3>Bill of Materials<a class="headerlink" href="#bill-of-materials" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="2%" />
+<col width="11%" />
+<col width="36%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Qty</th>
+<th class="head">Description</th>
+<th class="head">Datasheet</th>
+<th class="head">Order Link</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Printed Circuit Board</td>
+<td><a class="reference download internal" download="" href="_downloads/05fc5b51e618ba3e7613217b69a9a168/breakout.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pyControl</span> <span class="pre">D-Series</span> <span class="pre">Breakout</span> <span class="pre">1.4</span></code></a></td>
+<td><a class="reference external" href="https://oshpark.com/shared_projects/qB3NMaHN">OSH Park</a></td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Large Button</td>
+<td><a class="reference download internal" download="" href="_downloads/88949580b56cdc0146622eb8099ddeb2/tactile_switch_large.pdf"><code class="xref download docutils literal notranslate"><span class="pre">TL3300DF160Q</span></code></a></td>
+<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=EG4906CT-ND">Digi-Key</a></td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>Small Button</td>
+<td><a class="reference download internal" download="" href="_downloads/c2e8790bfcef6a6796a49d7ea6920921/tactile_switch_small.pdf"><code class="xref download docutils literal notranslate"><span class="pre">B3FS-1010P</span></code></a></td>
+<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=sw1440ct">Digi-Key</a></td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Barrel Jack Connector</td>
+<td><a class="reference download internal" download="" href="_downloads/d0c7a1a533782b02083cc73e7bac89d0/barrel_jack.pdf"><code class="xref download docutils literal notranslate"><span class="pre">PJ-037A</span></code></a></td>
+<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=CP-037A-ND">Digi-Key</a></td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>12-Port RJ45 Connector</td>
+<td><a class="reference download internal" download="" href="_downloads/f496dc1a2aee66af3606e6931598609b/rj45_12port.pdf"><code class="xref download docutils literal notranslate"><span class="pre">5569263-1</span></code></a></td>
+<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=5569263">Digi-Key</a></td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>40-pin WBUS Connector</td>
+<td><a class="reference download internal" download="" href="_downloads/4042c6afceabcb33edaafbe80300ba14/40_pin_connector.pdf"><code class="xref download docutils literal notranslate"><span class="pre">DF40HC(4.0)-40DS-0.4V(70)</span></code></a></td>
+<td><a class="reference external" href="https://www.digikey.com/product-detail/en/DF40HC(4.0)-40DS-0.4V(70)/H124604CT-ND/5155907/?itemSeq=290724516">Digi-Key</a></td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>Micro USB horizontal socket</td>
+<td><a class="reference download internal" download="" href="_downloads/a51acace92212f3c3c20b808453d1f54/horz_µUSB.pdf"><code class="xref download docutils literal notranslate"><span class="pre">10118194-0001LF</span></code></a></td>
+<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=609-4618-1-ND">Digi-Key</a></td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>5V DC to DC Converter</td>
+<td><a class="reference download internal" download="" href="_downloads/0fbf5ef5bdba838399a8ea50cdb4b8f5/dc_converter.pdf"><code class="xref download docutils literal notranslate"><span class="pre">R-78E5.0-1.0</span></code></a></td>
+<td><a class="reference external" href="https://www.digikey.com/products/en?keywords=945-2201-ND">Digi-Key</a></td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>Transistor Array</td>
+<td><a class="reference download internal" download="" href="_downloads/09f1ce16ef1d38b37123e24ac85f93fb/transistor_array.pdf"><code class="xref download docutils literal notranslate"><span class="pre">TBD62083AFNG</span></code></a></td>
+<td><a class="reference external" href="https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TBD62083AFNGEL/TBD62083AFNGELCT-ND/5514123">Digi-Key</a></td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Diode</td>
+<td><a class="reference download internal" download="" href="_downloads/58b6b6dcb736e90c232d33a65b598c9b/diode.pdf"><code class="xref download docutils literal notranslate"><span class="pre">MBR120VLSFT3G</span></code></a></td>
+<td><a class="reference external" href="https://www.digikey.com/product-detail/en/on-semiconductor/MBR120VLSFT3G/MBR120VLSFT3GOSCT-ND/3487322">Digi-Key</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cad">
+<h3>CAD<a class="headerlink" href="#cad" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://kicad-pcb.org/">KiCad</a> design files can be found <a class="reference external" href="https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/pcb">here</a>.</li>
+<li><a class="reference download internal" download="" href="_downloads/64dc2fb80e2450c333741cd137ba31d0/pyControl_DSeries_1.4.html"><code class="xref download docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">BOM</span> <span class="pre">(right</span> <span class="pre">click</span> <span class="pre">and</span> <span class="pre">open</span> <span class="pre">in</span> <span class="pre">new</span> <span class="pre">tab)</span></code></a></li>
+</ul>
+<div class="figure align-center" id="id23">
+<img alt="_images/render.png" src="_images/render.png" />
+<p class="caption"><span class="caption-text">Board rendering</span></p>
+</div>
+<div class="figure align-center" id="id24">
+<img alt="_images/schematic.png" src="_images/schematic.png" />
+<p class="caption"><span class="caption-text">Schematic (Right-click and open in new tab for larger view).</span></p>
+</div>
+</div>
+</div>
 <div class="section" id="further-resources">
 <h2>Further Resources<a class="headerlink" href="#further-resources" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>pyControl<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h3>pyControl<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/">Official pyControl documentation</a></li>
 <li><a class="reference external" href="https://groups.google.com/forum/#!forum/pycontrol">pyControl Google groups forum</a></li>
@@ -472,8 +544,8 @@ Having more pins enables the breakout to provide more behavior ports on a single
 <li><a class="reference external" href="https://pybd.io/hw/pybd_sfxw.html">Pyboard D-series Documentation</a></li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h3>pyControl D-series Breakout<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id18">
+<h3>pyControl D-series Breakout<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout">Github repository</a></li>
 </ul>
@@ -496,7 +568,7 @@ Having more pins enables the breakout to provide more behavior ports on a single
     <p>
         &copy; Copyright 2019, Andy Lustig
       <span class="lastupdated">
-        Last updated on Aug 20, 2019.
+        Last updated on Sep 04, 2019.
       </span>
 
     </p>
