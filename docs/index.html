@@ -385,7 +385,7 @@ Having more pins enables the breakout to provide more behavior ports on a single
 <p class="first admonition-title">Attention</p>
 <p>Before attaching the pyboard D-series to the breakout board, connect it directly to your computer and create/modify the <strong>boot.py</strong> file so it contains the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyb</span>
-<span class="n">pyb</span><span class="o">.</span><span class="n">usb_mode</span><span class="p">(</span><span class="s1">&#39;VCP+MSC&#39;</span><span class="p">,</span><span class="n">port</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">pyb</span><span class="o">.</span><span class="n">usb_mode</span><span class="p">(</span><span class="s1">&#39;VCP+MSC&#39;</span><span class="p">,</span><span class="n">port</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="last">This change to <strong>boot.py</strong> is required, otherwise the pyboard won’t be found by the pyControl software when it is connected to the breakout board! <a class="reference external" href="https://pybd.io/hw/pybd_sfxw.html#usb-ports">https://pybd.io/hw/pybd_sfxw.html#usb-ports</a></p>
@@ -533,7 +533,7 @@ Having more pins enables the breakout to provide more behavior ports on a single
 <li><a class="reference external" href="https://groups.google.com/forum/#!forum/pycontrol">pyControl Google groups forum</a></li>
 <li><a class="reference external" href="https://bitbucket.org/takam/pycontrol/src/default/">pyControl software repository</a>. [<a class="reference external" href="https://bitbucket.org/takam/pycontrol/downloads/">Download Page</a>].</li>
 <li><a class="reference external" href="https://bitbucket.org/takam/pycontrol_hardware/src/default/">pyControl hardware repository</a>. [<a class="reference external" href="https://bitbucket.org/takam/pycontrol_hardware/downloads/">Download Page</a>].</li>
-<li>Purchase ready to use pyControl hardware at the <a class="reference external" href="http://www.open-ephys.org/store">Open Ephys Store</a></li>
+<li>Purchase ready to use pyControl hardware at the <a class="reference external" href="http://www.open-ephys.org/pycontrol">Open Ephys Store</a></li>
 </ul>
 </div>
 <div class="section" id="micropython-and-pyboard-d-series">
@@ -568,7 +568,7 @@ Having more pins enables the breakout to provide more behavior ports on a single
     <p>
         &copy; Copyright 2019, Andy Lustig
       <span class="lastupdated">
-        Last updated on Sep 04, 2019.
+        Last updated on Sep 05, 2019.
       </span>
 
     </p>

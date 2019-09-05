@@ -82,7 +82,6 @@ Having more pins enables the breakout to provide more behavior ports on a single
 +---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
 
 
-
 Getting Started
 ---------------
 
@@ -116,7 +115,7 @@ Setup
     .. code-block:: python
     
         import pyb
-        pyb.usb_mode('VCP+MSC',port=1
+        pyb.usb_mode('VCP+MSC',port=1)
 
     This change to **boot.py** is required, otherwise the pyboard won't be found by the pyControl software when it is connected to the breakout board! https://pybd.io/hw/pybd_sfxw.html#usb-ports
 
@@ -203,7 +202,6 @@ Bill of Materials
 | 1   | Diode                       |  :download:`MBR120VLSFT3G<../../manufacturing/datasheets/diode.pdf>`                        | `Digi-Key <https://www.digikey.com/product-detail/en/on-semiconductor/MBR120VLSFT3G/MBR120VLSFT3GOSCT-ND/3487322>`_                  | 
 +-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 
-
 .. BOM end
 
 
@@ -231,7 +229,7 @@ pyControl
 - `pyControl Google groups forum <https://groups.google.com/forum/#!forum/pycontrol>`_ 
 - `pyControl software repository <https://bitbucket.org/takam/pycontrol/src/default/>`_. [`Download Page <https://bitbucket.org/takam/pycontrol/downloads/>`_].
 - `pyControl hardware repository <https://bitbucket.org/takam/pycontrol_hardware/src/default/>`_. [`Download Page <https://bitbucket.org/takam/pycontrol_hardware/downloads/>`_].
-- Purchase ready to use pyControl hardware at the `Open Ephys Store <http://www.open-ephys.org/store>`_ 
+- Purchase ready to use pyControl hardware at the `Open Ephys Store <http://www.open-ephys.org/pycontrol>`_ 
 
 
 MicroPython and Pyboard D-series
