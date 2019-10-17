@@ -38,7 +38,7 @@ How is it different?
 
 The core distinction between this breakout board and the official `pyControl breakout board 1.2 <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12>`_  is the use of a newer generation pyboard. 
 Some benefits of the newer pyboard include being smaller, faster, having more memory, and having more I/O pins.
-Having more pins enables the breakout to provide more behavior ports on a single smaller PCB without the need to add a `port expander <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander>`_.
+Having more avaialable pins is particularly useful, as it enables the breakout board to provide more behavior ports without requiring a `port expander <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander>`_ to be used.
 
 
 +---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
@@ -66,7 +66,7 @@ Having more pins enables the breakout to provide more behavior ports on a single
 +---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
 | - *I/O Pins*        | 14                                                                | 30                                                                             |
 +---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *UART*            | ports 3,4                                                         | ports 8,10,11,12                                                               |
+| - *UART*            | ports 1,3,4                                                       | ports 8,10,11,12                                                               |
 +---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
 | - *DAC and I2C*     | ports 3,4                                                         | ports 7,8                                                                      |
 +---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
@@ -80,93 +80,6 @@ Having more pins enables the breakout to provide more behavior ports on a single
 +---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
 | - *PCB Footprint*   | 1.8 in x 7.6 in                                                   | 2.7 in x 3.6 in                                                                |
 +---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-
-
-Getting Started
----------------
-
-What to Get
-+++++++++++
-
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| Qty | Description                      | Order Link                                                             | Required |
-+=====+==================================+========================================================================+==========+
-| 1   | D-series Breakout Board          | `Build your own <build_section_>`_                                     | Yes      |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 1   | pyboard D-series Microcontroller | `Micropython <https://store.micropython.org/product/PYBD-SF6-W4F2>`_   | Yes      |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 1   | 12V DC Power Supply              | `Digi-Key <https://www.digikey.com/products/en?keywords=102-3631-ND>`_ | Yes      |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 1   | USB cable                        | `Digi-Key <https://www.digikey.com/products/en?keywords=380-1431-ND>`_ | Yes      |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 1   | DIN Rail                         | `Digi-Key <https://www.digikey.com/short/prn3bb>`_                     |          |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 2   | DIN Rail Adapter                 | `Digi-Key <https://www.digikey.com/products/en?keywords=277-2296-nd>`_ |          |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 4   | M3 screws                        | `Digi-Key <https://www.digikey.com/products/en?keywords=335-1156-ND>`_ |          |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-
-Setup
-+++++
-.. attention:: 
-
-    Before attaching the pyboard D-series to the breakout board, connect it directly to your computer and create/modify the **boot.py** file so it contains the following code:
-    
-    .. code-block:: python
-    
-        import pyb
-        pyb.usb_mode('VCP+MSC',port=1)
-
-    This change to **boot.py** is required, otherwise the pyboard won't be found by the pyControl software when it is connected to the breakout board! https://pybd.io/hw/pybd_sfxw.html#usb-ports
-
-Follow instructions `here <https://pycontrol.readthedocs.io/en/latest/#getting-started>`_ to get started with using the pyControl software.
-
-
-Pinout
-++++++
-Refer to the diagram below when considering where to plug in devices.
-
-.. figure:: images/board_front_labeled.jpg
-
-.. figure:: images/pinouts.png
-    :align: center
-
-    (Right-click and open in new tab for larger view)
-
-
-Device file
-+++++++++++
-Here is a python device file that can be used within the pyControl framework. Place it in the ``devices/`` directory of your pyControl software. It can then be imported into a hardware definition file. 
-   
-- :download:`_breakout_dseries.py <_breakout_dseries.py>` 
-
-Here is an example hardware definition file that could be placed in the ``config/`` directory.
-
-.. code:: python
-
-    from devices import *
-    import pyControl.hardware as _h
-
-    board = Breakout_dseries()
-
-    button      = _h.Digital_input(board.button,rising_event='button',pull='up')
-
-    ########## Top Row #############
-    Lpoke       = Nosepoke(board.port_1, nose_event = 'L_nose', lick_event = 'L_lick' )
-    Cpoke       = Nosepoke(board.port_2, nose_event = 'C_nose',)
-    Rpoke       = Nosepoke(board.port_3, nose_event = 'R_nose', lick_event = 'R_lick' )
-    Llever      = Lever_electric(board.port_4, lever_event = 'L_lever')
-    Rlever      = Lever_electric(board.port_5, lever_event = 'R_lever')
-    houselight  = _h.Digital_output(board.port_6.POW_A)
-
-    ######### Bottom Row ###########
-    # empty port 7
-    Speakers    = Audio_player(board.port_8)
-    # empty port 9
-    # empty port 10
-    Rpump       = Syringe_pump(board.port_11)
-    Lpump       = Syringe_pump(board.port_12)
-
 
 .. _build_section:
 
@@ -221,14 +134,103 @@ CAD
 
     Schematic (Right-click and open in new tab for larger view).
 
+Getting Started
+---------------
+
+What to Get
++++++++++++
+
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| Qty | Description                      | Order Link                                                             | Required |
++=====+==================================+========================================================================+==========+
+| 1   | D-series Breakout Board          | `Build your own <build_section_>`_                                     | Yes      |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 1   | pyboard D-series Microcontroller | `Micropython <https://store.micropython.org/product/PYBD-SF6-W4F2>`_   | Yes      |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 1   | 12V DC Power Supply              | `Digi-Key <https://www.digikey.com/products/en?keywords=102-3631-ND>`_ | Yes      |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 1   | USB cable                        | `Digi-Key <https://www.digikey.com/products/en?keywords=380-1431-ND>`_ | Yes      |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 1   | DIN Rail                         | `Digi-Key <https://www.digikey.com/short/prn3bb>`_                     |          |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 2   | DIN Rail Adapter                 | `Digi-Key <https://www.digikey.com/products/en?keywords=277-2296-nd>`_ |          |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+| 4   | M3 screws                        | `Digi-Key <https://www.digikey.com/products/en?keywords=335-1156-ND>`_ |          |
++-----+----------------------------------+------------------------------------------------------------------------+----------+
+
+Setup
++++++
+.. attention:: 
+
+    Before attaching the pyboard D-series to the breakout board, connect it directly to your computer and create/modify the **boot.py** file so it contains the following code:
+    
+    .. code-block:: python
+    
+        import pyb
+        pyb.usb_mode('VCP+MSC',port=1,msc=(pyb.Flash(),))
+
+    This change to **boot.py** is required, otherwise the pyboard won't be found by the pyControl software when it is connected to the breakout board! https://pybd.io/hw/pybd_sfxw.html#usb-ports
+
+Follow instructions `here <https://pycontrol.readthedocs.io/en/latest/#getting-started>`_ to get started with using the pyControl software.
+
+
+Pinout
+++++++
+Refer to the diagram below when considering where to plug in devices.
+
+.. figure:: images/board_front_labeled.jpg
+
+.. figure:: images/pinouts.png
+    :align: center
+
+    (Right-click and open in new tab for larger view)
+
+
+Device file
++++++++++++
+Here is a python device file that can be used within the pyControl framework. 
+
+- :download:`_breakout_dseries.py <_breakout_dseries.py>` 
+
+Place it in the ``devices/`` directory of your pyControl software. It can then be imported into a hardware definition file. 
+
+Here is an example hardware definition file that could be placed in the ``config/`` directory. 
+
+.. code:: python
+
+    from devices import *
+    import pyControl.hardware as _h
+
+    board = Breakout_dseries()
+
+    button      = _h.Digital_input(board.button,rising_event='button',pull='up')
+
+    ########## Top Row #############
+    Lpoke       = Nosepoke(board.port_1, nose_event = 'L_nose', lick_event = 'L_lick' )
+    Cpoke       = Nosepoke(board.port_2, nose_event = 'C_nose',)
+    Rpoke       = Nosepoke(board.port_3, nose_event = 'R_nose', lick_event = 'R_lick' )
+    Llever      = Lever_electric(board.port_4, lever_event = 'L_lever')
+    Rlever      = Lever_electric(board.port_5, lever_event = 'R_lever')
+    houselight  = _h.Digital_output(board.port_6.POW_A)
+
+    ######### Bottom Row ###########
+    # empty port 7
+    Speakers    = Audio_player(board.port_8)
+    # empty port 9
+    # empty port 10
+    Rpump       = Syringe_pump(board.port_11)
+    Lpump       = Syringe_pump(board.port_12)
+
+
+
 Further Resources
 -----------------
 pyControl 
 +++++++++
 - `Official pyControl documentation <https://pycontrol.readthedocs.io/en/latest/>`_ 
 - `pyControl Google groups forum <https://groups.google.com/forum/#!forum/pycontrol>`_ 
-- `pyControl software repository <https://bitbucket.org/takam/pycontrol/src/default/>`_. [`Download Page <https://bitbucket.org/takam/pycontrol/downloads/>`_].
-- `pyControl hardware repository <https://bitbucket.org/takam/pycontrol_hardware/src/default/>`_. [`Download Page <https://bitbucket.org/takam/pycontrol_hardware/downloads/>`_].
+- `pyControl software repository <https://bitbucket.org/takam/pycontrol/src/default/>`_ [`Download Page <https://bitbucket.org/takam/pycontrol/downloads/>`_]
+- `pyControl hardware repository <https://github.com/ThomasAkam/pyControl_hardware>`_ 
 - Purchase ready to use pyControl hardware at the `Open Ephys Store <http://www.open-ephys.org/pycontrol>`_ 
 
 
@@ -240,7 +242,6 @@ MicroPython and Pyboard D-series
 
 pyControl D-series Breakout
 +++++++++++++++++++++++++++
-
 - `Github repository <https://github.com/Karpova-Lab/pyControl-D-series-Breakout>`_ 
 
 .. toctree::

@@ -1,7 +1,7 @@
 import pyControl.hardware as _h
 
 # for use with pyControl D-Series Breakout PCB v1.4
-# for more info visit https://karpova-lab.github.io/pyControl-D-Series-Breakout/build.html#pinout
+# for more info visit https://karpova-lab.github.io/pyControl-D-Series-Breakout/#pinout
 
 class Breakout_dseries(_h.Mainboard):
     def __init__(self):
