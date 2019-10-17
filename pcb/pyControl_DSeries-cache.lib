@@ -184,6 +184,7 @@ F0 "DRA" 0 250 50 H V C CNN
 F1 "asl_symbols_DIN_Rail_Adapter" 0 150 50 H V C CNN
 F2 "asl_footprints:DIN_Clip" 0 -200 50 H I C CNN
 F3 "" 0 150 50 H I C CNN
+F4 "1" 0 0 50 H V C CNN "DNP"
 $FPLIST
  DINRailAdapter?3xM3*
  DINRailAdapter?2xM3*
