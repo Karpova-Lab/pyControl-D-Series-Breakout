@@ -38,7 +38,7 @@ How is it different?
 
 The core distinction between this breakout board and the official `pyControl breakout board 1.2 <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12>`_  is the use of a newer generation pyboard. 
 Some benefits of the newer pyboard include being smaller, faster, having more memory, and having more I/O pins.
-Having more avaialable pins is particularly useful, as it enables the breakout board to provide more behavior ports without requiring a `port expander <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander>`_ to be used.
+Having more available pins is particularly useful, as it enables the breakout board to provide more behavior ports without requiring a `port expander <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander>`_
 
 
 +---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
