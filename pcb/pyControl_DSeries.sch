@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
 LIBS:pyControl_DSeries-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "pyControl D-Series Breakout"
-Date "2019-08-05"
-Rev "1.4"
+Date "2019-10-16"
+Rev "1.5"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -253,12 +253,10 @@ Wire Wire Line
 Text Label 1050 1650 2    50   ~ 0
 B2_DA
 Wire Wire Line
-	3500 2150 3350 2150
-Wire Wire Line
-	3500 2350 3350 2350
-Text Label 3350 2150 2    50   ~ 0
+	3500 2150 3450 2150
+Text Label 3450 2150 2    50   ~ 0
 B1_DA
-Text Label 3350 2350 2    50   ~ 0
+Text Label 3450 2350 2    50   ~ 0
 B1_DB
 Wire Wire Line
 	1850 5700 1850 5750
@@ -338,7 +336,7 @@ Text Label 4800 2750 0    50   ~ 0
 RST
 Text Label 3450 1750 2    50   ~ 0
 USR
-Text Label 5650 2750 0    50   ~ 0
+Text Label 5800 2750 0    50   ~ 0
 GND
 Wire Wire Line
 	6750 1850 6750 1900
@@ -372,8 +370,6 @@ Wire Wire Line
 	6300 2400 6350 2400
 Wire Wire Line
 	6300 2300 6350 2300
-Wire Wire Line
-	6300 2200 6350 2200
 Wire Wire Line
 	6300 2100 6350 2100
 Text Label 6750 3050 0    50   ~ 0
@@ -434,16 +430,12 @@ Text Notes 5800 800  2    50   ~ 0
 Vin should be about 4.8V \nafter going through diode
 Wire Wire Line
 	1050 1350 1100 1350
-Wire Wire Line
-	1100 1550 1050 1550
 Text Label 1050 1350 2    50   ~ 0
 B2_DAC
 Text Label 1050 1450 2    50   ~ 0
 B2_DB
-Text Label 1050 1550 2    50   ~ 0
+Text Label 4800 2850 0    50   ~ 0
 B1_COMA
-Wire Wire Line
-	1100 1750 1050 1750
 Wire Wire Line
 	1100 1850 1050 1850
 Wire Wire Line
@@ -452,9 +444,7 @@ Wire Wire Line
 	1050 2050 1100 2050
 Wire Wire Line
 	1050 2150 1100 2150
-Wire Wire Line
-	1050 2250 1100 2250
-Text Label 1050 1750 2    50   ~ 0
+Text Label 4800 2650 0    50   ~ 0
 T1_COMB
 Text Label 1050 1850 2    50   ~ 0
 T1_COMA
@@ -464,8 +454,6 @@ Text Label 1050 2050 2    50   ~ 0
 B2_COMA
 Text Label 1050 2150 2    50   ~ 0
 T2_COMB
-Text Label 1050 2250 2    50   ~ 0
-T2_COMA
 Text Label 6300 2800 2    50   ~ 0
 B1_COMA
 Text Label 6300 2700 2    50   ~ 0
@@ -606,10 +594,6 @@ Text Label 3500 5750 3    50   ~ 0
 B2_PA
 Text Label 4100 5750 3    50   ~ 0
 B2_PB
-Wire Wire Line
-	4100 4050 4100 4100
-Text Label 4100 4050 1    50   ~ 0
-T2_PB
 Text Label 1050 2450 2    50   ~ 0
 B3_COMA
 Text Label 1050 2550 2    50   ~ 0
@@ -720,12 +704,6 @@ Wire Wire Line
 Wire Wire Line
 	3450 1450 3500 1450
 Wire Wire Line
-	3450 1550 3500 1550
-Wire Wire Line
-	3450 1850 3500 1850
-Wire Wire Line
-	3450 1950 3500 1950
-Wire Wire Line
 	2950 1750 3500 1750
 Wire Wire Line
 	3450 1150 3450 950 
@@ -736,7 +714,7 @@ Wire Wire Line
 	2950 800  2950 1750
 Text Label 3450 1450 2    50   ~ 0
 B5_COMA
-Text Label 3450 1550 2    50   ~ 0
+Text Label 4800 2050 0    50   ~ 0
 T5_COMB
 Text Label 9600 2800 2    50   ~ 0
 B5_COMA
@@ -754,9 +732,9 @@ Text Label 9600 2200 2    50   ~ 0
 T6_COMB
 Text Label 9600 2100 2    50   ~ 0
 T6_COMA
-Text Label 3450 1850 2    50   ~ 0
+Text Label 4800 1950 0    50   ~ 0
 T5_COMA
-Text Label 3450 1950 2    50   ~ 0
+Text Label 4800 1450 0    50   ~ 0
 B6_COMA
 Text Label 2550 2450 0    50   ~ 0
 T6_COMA
@@ -841,29 +819,11 @@ T3_DA
 Text Label 3450 2950 2    50   ~ 0
 T3_DB
 Wire Wire Line
-	4800 1450 4750 1450
-Wire Wire Line
-	4800 1750 4750 1750
-Wire Wire Line
-	4800 1850 4750 1850
-Wire Wire Line
-	4800 1950 4750 1950
-Wire Wire Line
-	4800 2050 4750 2050
-Wire Wire Line
-	4800 2150 4750 2150
-Wire Wire Line
 	4800 2250 4750 2250
 Wire Wire Line
 	4800 2350 4750 2350
-Wire Wire Line
-	4800 2650 4750 2650
-Wire Wire Line
-	4800 2850 4750 2850
-Text Label 4800 1750 0    50   ~ 0
+Text Label 3450 1950 2    50   ~ 0
 B3_DA
-Text Label 4800 1850 0    50   ~ 0
-B3_DB
 Wire Wire Line
 	4550 5750 4550 5700
 Wire Wire Line
@@ -884,31 +844,29 @@ Wire Wire Line
 	5150 4050 5150 4100
 Text Label 5150 4050 1    50   ~ 0
 T3_DC
-Text Label 4800 1950 0    50   ~ 0
+Text Label 1050 1550 2    50   ~ 0
 T4_DA
-Text Label 4800 2050 0    50   ~ 0
+Text Label 4800 1750 0    50   ~ 0
 T4_DB
-Text Label 4800 2150 0    50   ~ 0
+Text Label 4800 1850 0    50   ~ 0
 T4_DC
 Text Label 4800 2250 0    50   ~ 0
 T5_DA
 Text Label 4800 2350 0    50   ~ 0
 T5_DB
-Text Label 4800 2650 0    50   ~ 0
+Text Label 3450 1850 2    50   ~ 0
 T6_DA
 Wire Wire Line
 	6500 4050 6500 4100
 Text Label 6500 4050 1    50   ~ 0
 T4_DC
-Text Label 4800 2850 0    50   ~ 0
-T6_DB
 Text Label 7550 5750 3    50   ~ 0
 B5_PA
 Text Label 3450 2450 2    50   ~ 0
 T1_DA
 Text Label 3450 2550 2    50   ~ 0
 T2_DC
-Text Label 4800 1450 0    50   ~ 0
+Text Label 1050 2250 2    50   ~ 0
 T3_DC
 Wire Wire Line
 	6300 950  6450 950 
@@ -919,7 +877,7 @@ Connection ~ 7350 950
 Wire Wire Line
 	7350 950  7700 950 
 Wire Wire Line
-	5650 2850 5650 2750
+	5800 2850 5800 2750
 Wire Wire Line
 	6300 1250 6750 1250
 Connection ~ 6750 1250
@@ -930,7 +888,7 @@ L asl_symbols:R-78E5.0-1.0 U2
 U 1 1 5CE060BC
 P 6750 950
 F 0 "U2" H 6750 1192 50  0000 C CNN
-F 1 "R-78E5.0-1.0" H 6750 1101 50  0000 C CNN
+F 1 "Voltage Regulator" H 6750 1101 50  0000 C CNN
 F 2 "asl_footprints:Converter_DCDC_RECOM_R-78E-0.5_THT" H 6750 1150 50  0001 C CIN
 F 3 "https://www.digikey.com/products/en?keywords=945-2201-ND" H 6750 900 50  0001 C CNN
 	1    6750 950 
@@ -943,7 +901,7 @@ P 7350 1100
 F 0 "C2" H 7465 1146 50  0000 L CNN
 F 1 "10µF" H 7465 1055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 7388 950 50  0001 C CNN
-F 3 "~" H 7350 1100 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=1276-1804-1-ND" H 7350 1100 50  0001 C CNN
 	1    7350 1100
 	1    0    0    -1  
 $EndComp
@@ -954,7 +912,7 @@ P 6300 1100
 F 0 "C1" H 6415 1146 50  0000 L CNN
 F 1 "10µF" H 6415 1055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 6338 950 50  0001 C CNN
-F 3 "~" H 6300 1100 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=1276-1804-1-ND" H 6300 1100 50  0001 C CNN
 	1    6300 1100
 	1    0    0    -1  
 $EndComp
@@ -963,9 +921,9 @@ L asl_symbols:TBD62083APG U5
 U 1 1 5CC0462C
 P 10050 2400
 F 0 "U5" H 9800 2850 50  0000 C CNN
-F 1 "TBD62083APG" H 10350 2850 50  0000 C CNN
+F 1 "TBD62083A" H 10350 2850 50  0000 C CNN
 F 2 "asl_footprints:SSOP-18_4.4x6.5mm_P0.65mm" H 10050 1850 50  0001 C CNN
-F 3 "https://www.digikey.com/products/en?keywords=TBD62083APG" H 9750 2800 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=TBD62083AFNGELCT-ND" H 9750 2800 50  0001 C CNN
 	1    10050 2400
 	1    0    0    -1  
 $EndComp
@@ -974,9 +932,9 @@ L asl_symbols:TBD62083APG U4
 U 1 1 5CC021CC
 P 8450 2400
 F 0 "U4" H 8200 2850 50  0000 C CNN
-F 1 "TBD62083APG" H 8750 2850 50  0000 C CNN
+F 1 "TBD62083A" H 8750 2850 50  0000 C CNN
 F 2 "asl_footprints:SSOP-18_4.4x6.5mm_P0.65mm" H 8450 1850 50  0001 C CNN
-F 3 "https://www.digikey.com/products/en?keywords=TBD62083APG" H 8150 2800 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=TBD62083AFNGELCT-ND" H 8150 2800 50  0001 C CNN
 	1    8450 2400
 	1    0    0    -1  
 $EndComp
@@ -985,9 +943,9 @@ L asl_symbols:TBD62083APG U3
 U 1 1 5CB55371
 P 6750 2400
 F 0 "U3" H 6500 2850 50  0000 C CNN
-F 1 "TBD62083APG" H 7050 2850 50  0000 C CNN
+F 1 "TBD62083A" H 7050 2850 50  0000 C CNN
 F 2 "asl_footprints:SSOP-18_4.4x6.5mm_P0.65mm" H 6750 1850 50  0001 C CNN
-F 3 "https://www.digikey.com/products/en?keywords=TBD62083APG" H 6450 2800 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=TBD62083AFNGELCT-ND" H 6450 2800 50  0001 C CNN
 	1    6750 2400
 	1    0    0    -1  
 $EndComp
@@ -998,7 +956,8 @@ P 10500 1050
 F 0 "DRA2" H 10500 1300 50  0000 C CNN
 F 1 "DIN_Rail_Adapter" H 10500 1200 50  0000 C CNN
 F 2 "asl_footprints:DIN_Clip" H 10500 850 50  0001 C CNN
-F 3 "~" H 10500 1200 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=277-2296-nd" H 10500 1200 50  0001 C CNN
+F 4 "1" H 10500 1050 50  0001 C CNN "DNP"
 	1    10500 1050
 	1    0    0    -1  
 $EndComp
@@ -1009,19 +968,9 @@ P 9450 1050
 F 0 "DRA1" H 9450 1300 50  0000 C CNN
 F 1 "DIN_Rail_Adapter" H 9450 1200 50  0000 C CNN
 F 2 "asl_footprints:DIN_Clip" H 9450 850 50  0001 C CNN
-F 3 "~" H 9450 1200 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=277-2296-nd" H 9450 1200 50  0001 C CNN
+F 4 "1" H 9450 1050 50  0001 C CNN "DNP"
 	1    9450 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L asl_symbols:5569263-1 J2
-U 1 1 5CB1CE06
-P 5750 4950
-F 0 "J2" H 1557 5046 50  0000 R CNN
-F 1 "RJ45-12PORT" H 1557 4955 50  0000 R CNN
-F 2 "asl_footprints:RJ45_12Port" H 5700 5000 50  0001 C CNN
-F 3 "" H 6700 4800 50  0001 C CNN
-	1    5750 4950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1029,9 +978,9 @@ L asl_symbols:Diode D1
 U 1 1 5CB44C39
 P 5950 950
 F 0 "D1" H 5950 1166 50  0000 C CNN
-F 1 "Diode" H 5950 1075 50  0000 C CNN
+F 1 "Schottky Diode" H 5950 1075 50  0000 C CNN
 F 2 "asl_footprints:D_SOD-123F" H 5950 950 50  0001 C CNN
-F 3 "~" H 5950 950 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=MBR120VLSFT3GOSCT-ND" H 5950 950 50  0001 C CNN
 	1    5950 950 
 	1    0    0    -1  
 $EndComp
@@ -1040,7 +989,7 @@ L asl_symbols:PJ-037A J3
 U 1 1 5CB3092D
 P 8000 1050
 F 0 "J3" H 7770 1008 50  0000 R CNN
-F 1 "Barrel_Jack" H 7770 1099 50  0000 R CNN
+F 1 "Barrel Jack" H 7770 1099 50  0000 R CNN
 F 2 "asl_footprints:DC_Jack" H 8050 1010 50  0001 C CNN
 F 3 "https://www.digikey.com/product-detail/en/cui-inc/PJ-037A/CP-037A-ND/1644545" H 8050 1010 50  0001 C CNN
 	1    8000 1050
@@ -1057,24 +1006,13 @@ Wire Wire Line
 Wire Wire Line
 	2550 1550 2500 1550
 $Comp
-L asl_symbols:PyBoard-D-Series U1
-U 1 1 5CABD5DA
-P 1200 1050
-F 0 "U1" H 1800 -800 50  0000 C CNN
-F 1 "PyBoard-D-Series" H 1800 -900 50  0000 C CNN
-F 2 "asl_footprints:PyBoard_D-Series" H 2300 -200 50  0001 C CNN
-F 3 "https://pybd.io/hw/wbus_dip68.html" H 2300 -200 50  0001 C CNN
-	1    1200 1050
-	1    0    0    -1  
-$EndComp
-$Comp
 L asl_symbols:USB_micro_horz_socket_reinforced J1
 U 1 1 5D41378A
 P 5700 1550
 F 0 "J1" H 5700 1170 59  0000 C CNN
-F 1 "USB_micro_horz_socket_reinforced" H 5700 1900 50  0001 C CNN
+F 1 "MicroUSB Connector" H 5700 1900 50  0001 C CNN
 F 2 "asl_footprints:microUSB_horizontal_socket" H 5750 1150 50  0001 C CNN
-F 3 "" H 5700 1550 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=609-4618-1-ND" H 5700 1550 50  0001 C CNN
 	1    5700 1550
 	1    0    0    1   
 $EndComp
@@ -1115,7 +1053,7 @@ L asl_symbols:Hirose_40_pin_connector X2U1
 U 1 1 5D3C2F6B
 P 4150 3300
 F 0 "X2U1" H 4428 3321 50  0000 L CNN
-F 1 "Hirose_40_pin_connector" H 4428 3230 50  0000 L CNN
+F 1 "40-pin Connector" H 4428 3230 50  0000 L CNN
 F 2 "asl_footprints:Hirose_40_pin" H 4300 4250 50  0001 C CNN
 F 3 "https://www.digikey.com/products/en?keywords=H124604CT-ND" H 7750 800 50  0001 C CNN
 	1    4150 3300
@@ -1126,7 +1064,7 @@ L asl_symbols:Hirose_40_pin_connector X1U1
 U 1 1 5D3C3509
 P 1750 3300
 F 0 "X1U1" H 2028 3321 50  0000 L CNN
-F 1 "Hirose_40_pin_connector" H 2028 3230 50  0000 L CNN
+F 1 "40-pin Connector" H 2028 3230 50  0000 L CNN
 F 2 "asl_footprints:Hirose_40_pin" H 1900 4250 50  0001 C CNN
 F 3 "https://www.digikey.com/products/en?keywords=H124604CT-ND" H 5350 800 50  0001 C CNN
 	1    1750 3300
@@ -1137,7 +1075,7 @@ L asl_symbols:TL3300 S1
 U 1 1 5D3CC44A
 P 3250 750
 F 0 "S1" H 3250 550 50  0000 C CNN
-F 1 "TL3300" H 3250 950 50  0000 C CNN
+F 1 "Large Tactile Switch" H 3250 950 50  0000 C CNN
 F 2 "asl_footprints:12mm_tactile_smd" H 3100 650 50  0001 C CNN
 F 3 "https://www.digikey.com/products/en?keywords=EG4906CT-ND" H 3100 650 50  0001 C CNN
 	1    3250 750 
@@ -1151,18 +1089,108 @@ Connection ~ 3550 800
 $Comp
 L asl_symbols:B3FS-1010P S2
 U 1 1 5CB7B2BF
-P 5350 2800
-F 0 "S2" H 5350 3000 50  0000 C CNN
-F 1 "B3FS-1010P" H 5350 2600 50  0000 C CNN
-F 2 "asl_footprints:6mm_tactile_smd" H 5200 2700 50  0001 C CNN
-F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf" H 5200 2700 50  0001 C CNN
-	1    5350 2800
+P 5500 2800
+F 0 "S2" H 5500 3000 50  0000 C CNN
+F 1 "Small Tactile Switch" H 5500 2600 50  0000 C CNN
+F 2 "asl_footprints:6mm_tactile_smd" H 5350 2700 50  0001 C CNN
+F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3f.pdf" H 5350 2700 50  0001 C CNN
+	1    5500 2800
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4750 2750 5050 2750
+	4750 2750 5200 2750
 Wire Wire Line
 	5100 1450 5100 1650
 Wire Wire Line
 	5100 1650 4750 1650
+Wire Wire Line
+	1100 2250 1050 2250
+Wire Wire Line
+	4750 1750 4800 1750
+Wire Wire Line
+	4750 1850 4800 1850
+Wire Wire Line
+	3450 1850 3500 1850
+Text Label 3450 1550 2    50   ~ 0
+T6_DB
+Wire Wire Line
+	3500 2350 3450 2350
+Wire Wire Line
+	3500 1550 3450 1550
+$Comp
+L asl_symbols:PyBoard-D-Series U1
+U 1 1 5CABD5DA
+P 1200 1050
+F 0 "U1" H 1800 -800 50  0000 C CNN
+F 1 "pyboard-D-series" H 1800 -900 50  0000 C CNN
+F 2 "asl_footprints:PyBoard_D-Series" H 2300 -200 50  0001 C CNN
+F 3 "https://pybd.io/hw/wbus_dip68.html" H 2300 -200 50  0001 C CNN
+F 4 "1" H 1200 1050 50  0001 C CNN "DNP"
+	1    1200 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1950 3500 1950
+Text Label 1050 1750 2    50   ~ 0
+B3_DB
+Wire Wire Line
+	1100 1750 1050 1750
+Wire Wire Line
+	1100 1550 1050 1550
+Wire Wire Line
+	4750 2850 4800 2850
+Wire Wire Line
+	4750 2650 4800 2650
+Wire Wire Line
+	6350 2200 6300 2200
+Text Label 4800 2150 0    50   ~ 0
+T2_COMA
+Wire Wire Line
+	4750 2150 4800 2150
+Wire Wire Line
+	4750 2050 4800 2050
+Wire Wire Line
+	4750 1950 4800 1950
+Wire Wire Line
+	4750 1450 4800 1450
+NoConn ~ 9750 4650
+NoConn ~ 9750 4850
+NoConn ~ 9750 5050
+NoConn ~ 9200 4100
+NoConn ~ 1600 4650
+NoConn ~ 1600 4850
+NoConn ~ 1600 5100
+NoConn ~ 1100 1150
+NoConn ~ 1100 1250
+NoConn ~ 2500 2650
+NoConn ~ 2500 2150
+NoConn ~ 2500 1750
+NoConn ~ 3500 1650
+NoConn ~ 2500 1150
+NoConn ~ 3500 3050
+NoConn ~ 4750 3050
+NoConn ~ 4750 2950
+NoConn ~ 5400 1650
+NoConn ~ 5200 2850
+NoConn ~ 5150 5700
+NoConn ~ 6500 5700
+NoConn ~ 7850 5700
+NoConn ~ 9200 5700
+Text Label 4100 4050 1    50   ~ 0
+T2_PB
+Wire Wire Line
+	4100 4050 4100 4100
+NoConn ~ 2950 700 
+NoConn ~ 7850 4100
+$Comp
+L asl_symbols:5569263-1 J2
+U 1 1 5DAC0C4E
+P 5750 4950
+F 0 "J2" H 1557 5046 50  0000 R CNN
+F 1 "12-port RJ45" H 1557 4955 50  0000 R CNN
+F 2 "asl_footprints:RJ45_12Port" H 5600 5000 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=5569263" H 6700 4800 50  0001 C CNN
+	1    5750 4950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
