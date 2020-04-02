@@ -5,246 +5,78 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-pyControl D-series Breakout
-===========================
+D-series Breakout for pyControl
+===============================
 
-.. figure:: images/board_iso.jpg
-    :align: center
-    
-    pyControl D-series Breakout clipped onto `DIN rail <https://en.wikipedia.org/wiki/DIN_rail>`_ 
+.. image:: images/board_iso.jpg
+    :width: 49%
 
-.. figure:: images/board_top.jpg
-    :align: center
-
-    Top view
-
+.. image:: images/board_top.jpg
+    :width: 49%
 
 What is this?
 -------------
 
-pyControl D-series breakout is a PCB that connects a  `pyboard D-series microcontoller <https://pybd.io/hw/pybd_sfxw.html>`_  with twelve RJ45 ports. 
-It is intended to be used with the `pyControl <https://pycontrol.readthedocs.io/en/latest/>`_ behavioral experiment control framework.
-It accomplishes by using a microcontroller running `Micropython <https://micropython.org/>`_  and having the RJ45 connections that are pin compatible with `pyControl Devices <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-boards>`_.
+pyControl D-series breakout is a device that connects a `pyboard D-series microcontroller <https://pybd.io/hw/pybd_sfxw.html>`_  with twelve RJ45 ports. 
+It is intended for use with the `pyControl <https://pycontrol.readthedocs.io/en/latest/>`_ behavioral experiment control framework.
+It accomplishes this by using a microcontroller running `Micropython <https://micropython.org/>`_  and having the RJ45 connections that are pin compatible with `pyControl Devices <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-boards>`_.
 
 How is it different?
 --------------------
 
-
 .. figure:: images/side_by_side.jpg
     :align: center
 
-    pyControl Breakout Board 1.2 (left) and D-series Breakout 1.4 (right)
-
+    pyControl Breakout Board 1.2 (left) and D-series Breakout (right)
 
 The core distinction between this breakout board and the official `pyControl breakout board 1.2 <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12>`_  is the use of a newer generation pyboard. 
-Some benefits of the newer pyboard include being smaller, faster, having more memory, and having more I/O pins.
-Having more available pins is particularly useful, as it enables the breakout board to provide more behavior ports without requiring a `port expander <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander>`_
+Some benefits of the newer pyboard include being smaller, faster, having more memory, and having more input/output pins.
+Having more available pins is particularly useful, as it enables the breakout board to provide more behavior ports without requiring a `port expander <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander>`_. Below is a comparison of the two breakout boards.
 
-
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-|                     | Breakout Board 1.2                                                | D-series Breakout Board 1.4                                                    |
-+=====================+===================================================================+================================================================================+
-| **Microcontroller** |                                                                   |                                                                                |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *Board*           | `pyboard v1.1 <https://store.micropython.org/product/PYBv1.1#_>`_ | `pyboard D-series SF6W <https://store.micropython.org/product/PYBD-SF6-W4F2>`_ |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *CPU*             | 168 Mhz Cortex-M4F                                                | 216 MHz Cortex-M7F                                                             |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *RAM*             | 192 KB                                                            | 512 KB                                                                         |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *ROM*             | 512 KB                                                            | 4,048 KB                                                                       |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| **Connectors**      |                                                                   |                                                                                |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *RJ45*            | 6                                                                 | 12                                                                             |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *BNC*             | 4                                                                 | 0                                                                              |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| **Behavior Ports**  |                                                                   |                                                                                |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *Power Pins*      | 14                                                                | 24                                                                             |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *I/O Pins*        | 14                                                                | 30                                                                             |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *UART*            | ports 1,3,4                                                       | ports 8,10,11,12                                                               |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *DAC and I2C*     | ports 3,4                                                         | ports 7,8                                                                      |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| **Interface**       |                                                                   |                                                                                |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *Indicator LEDs*  | 10                                                                | 0                                                                              |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *Pushbutton*      | 1                                                                 | 1                                                                              |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| **Dimensions**      |                                                                   |                                                                                |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-| - *PCB Footprint*   | 1.8 in x 7.6 in                                                   | 2.7 in x 3.6 in                                                                |
-+---------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
-
-.. _build_section:
-
-Building One
-------------
-
-Bill of Materials
-+++++++++++++++++
-
-.. BOM start
-
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| Qty | Description                 | Datasheet                                                                                   | Order Link                                                                                                                           | 
-+=====+=============================+=============================================================================================+======================================================================================================================================+
-| 1   | Printed Circuit Board       |  :download:`pyControl D-Series Breakout 1.4<../../manufacturing/datasheets/breakout.pdf>`   | `OSH Park <https://oshpark.com/shared_projects/qB3NMaHN>`_                                                                           | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Large Button                |  :download:`TL3300DF160Q<../../manufacturing/datasheets/tactile_switch_large.pdf>`          | `Digi-Key <https://www.digikey.com/products/en?keywords=EG4906CT-ND>`_                                                               | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Small Button                |  :download:`B3FS-1010P<../../manufacturing/datasheets/tactile_switch_small.pdf>`            | `Digi-Key <https://www.digikey.com/products/en?keywords=sw1440ct>`_                                                                  | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Barrel Jack Connector       |  :download:`PJ-037A<../../manufacturing/datasheets/barrel_jack.pdf>`                        | `Digi-Key <https://www.digikey.com/products/en?keywords=CP-037A-ND>`_                                                                | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| 2   | 12-Port RJ45 Connector      |  :download:`5569263-1<../../manufacturing/datasheets/rj45_12port.pdf>`                      | `Digi-Key <https://www.digikey.com/products/en?keywords=5569263>`_                                                                   | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| 2   | 40-pin WBUS Connector       |  :download:`DF40HC(4.0)-40DS-0.4V(70)<../../manufacturing/datasheets/40_pin_connector.pdf>` | `Digi-Key <https://www.digikey.com/product-detail/en/DF40HC(4.0)-40DS-0.4V(70)/H124604CT-ND/5155907/?itemSeq=290724516>`_            | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Micro USB horizontal socket |  :download:`10118194-0001LF<../../manufacturing/datasheets/horz_µUSB.pdf>`                  | `Digi-Key <https://www.digikey.com/products/en?keywords=609-4618-1-ND>`_                                                             | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | 5V DC to DC Converter       |  :download:`R-78E5.0-1.0<../../manufacturing/datasheets/dc_converter.pdf>`                  | `Digi-Key <https://www.digikey.com/products/en?keywords=945-2201-ND>`_                                                               | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| 3   | Transistor Array            |  :download:`TBD62083AFNG<../../manufacturing/datasheets/transistor_array.pdf>`              | `Digi-Key <https://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TBD62083AFNGEL/TBD62083AFNGELCT-ND/5514123>`_ | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| 1   | Diode                       |  :download:`MBR120VLSFT3G<../../manufacturing/datasheets/diode.pdf>`                        | `Digi-Key <https://www.digikey.com/product-detail/en/on-semiconductor/MBR120VLSFT3G/MBR120VLSFT3GOSCT-ND/3487322>`_                  | 
-+-----+-----------------------------+---------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-
-.. BOM end
-
-
-CAD
-+++
-
-- `KiCad <http://kicad-pcb.org/>`_ design files can be found `here <https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/pcb>`_.
-- :download:`Interactive BOM (right click and open in new tab) <pyControl_DSeries_1.4.html>` 
-
-.. figure:: images/render.png
-    :align: center
-
-    Board rendering
-
-.. figure:: images/schematic.png
-    :align: center
-
-    Schematic (Right-click and open in new tab for larger view).
-
-Getting Started
----------------
-
-What to Get
-+++++++++++
-
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| Qty | Description                      | Order Link                                                             | Required |
-+=====+==================================+========================================================================+==========+
-| 1   | D-series Breakout Board          | `Build your own <build_section_>`_                                     | Yes      |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 1   | pyboard D-series Microcontroller | `Micropython <https://store.micropython.org/product/PYBD-SF6-W4F2>`_   | Yes      |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 1   | 12V DC Power Supply              | `Digi-Key <https://www.digikey.com/products/en?keywords=102-3631-ND>`_ | Yes      |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 1   | USB cable                        | `Digi-Key <https://www.digikey.com/products/en?keywords=380-1431-ND>`_ | Yes      |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 1   | DIN Rail                         | `Digi-Key <https://www.digikey.com/short/prn3bb>`_                     |          |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 2   | DIN Rail Adapter                 | `Digi-Key <https://www.digikey.com/products/en?keywords=277-2296-nd>`_ |          |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-| 4   | M3 screws                        | `Digi-Key <https://www.digikey.com/products/en?keywords=335-1156-ND>`_ |          |
-+-----+----------------------------------+------------------------------------------------------------------------+----------+
-
-Setup
-+++++
-.. attention:: 
-
-    Before attaching the pyboard D-series to the breakout board, connect it directly to your computer and create/modify the **boot.py** file so it contains the following code:
-    
-    .. code-block:: python
-    
-        import pyb
-        pyb.usb_mode('VCP+MSC',port=1,msc=(pyb.Flash(),))
-
-    This change to **boot.py** is required, otherwise the pyboard won't be found by the pyControl software when it is connected to the breakout board! https://pybd.io/hw/pybd_sfxw.html#usb-ports
-
-Follow instructions `here <https://pycontrol.readthedocs.io/en/latest/#getting-started>`_ to get started with using the pyControl software.
-
-
-Pinout
-++++++
-Refer to the diagram below when considering where to plug in devices.
-
-.. figure:: images/board_front_labeled.jpg
-
-.. figure:: images/pinouts.png
-    :align: center
-
-    (Right-click and open in new tab for larger view)
-
-
-Device file
-+++++++++++
-Here is a python device file that can be used within the pyControl framework. 
-
-- :download:`_breakout_dseries.py <_breakout_dseries.py>` 
-
-Place it in the ``devices/`` directory of your pyControl software. It can then be imported into a hardware definition file. 
-
-Here is an example hardware definition file that could be placed in the ``config/`` directory. 
-
-.. code:: python
-
-    from devices import *
-    import pyControl.hardware as _h
-
-    board = Breakout_dseries()
-
-    button      = _h.Digital_input(board.button,rising_event='button',pull='up')
-
-    ########## Top Row #############
-    Lpoke       = Nosepoke(board.port_1, nose_event = 'L_nose', lick_event = 'L_lick' )
-    Cpoke       = Nosepoke(board.port_2, nose_event = 'C_nose',)
-    Rpoke       = Nosepoke(board.port_3, nose_event = 'R_nose', lick_event = 'R_lick' )
-    Llever      = Lever_electric(board.port_4, lever_event = 'L_lever')
-    Rlever      = Lever_electric(board.port_5, lever_event = 'R_lever')
-    houselight  = _h.Digital_output(board.port_6.POW_A)
-
-    ######### Bottom Row ###########
-    # empty port 7
-    Speakers    = Audio_player(board.port_8)
-    # empty port 9
-    # empty port 10
-    Rpump       = Syringe_pump(board.port_11)
-    Lpump       = Syringe_pump(board.port_12)
-
-
-
-Further Resources
------------------
-pyControl 
-+++++++++
-- `Official pyControl documentation <https://pycontrol.readthedocs.io/en/latest/>`_ 
-- `pyControl Google groups forum <https://groups.google.com/forum/#!forum/pycontrol>`_ 
-- `pyControl software repository <https://bitbucket.org/takam/pycontrol/src/default/>`_ [`Download Page <https://bitbucket.org/takam/pycontrol/downloads/>`_]
-- `pyControl hardware repository <https://github.com/ThomasAkam/pyControl_hardware>`_ 
-- Purchase ready to use pyControl hardware at the `Open Ephys Store <http://www.open-ephys.org/pycontrol>`_ 
-
-
-MicroPython and Pyboard D-series
-++++++++++++++++++++++++++++++++
-- `MicroPython Documentation <http://docs.micropython.org/en/latest/>`_ 
-- `MicroPython Store <https://store.micropython.org/>`_ 
-- `Pyboard D-series Documentation <https://pybd.io/hw/pybd_sfxw.html>`_ 
-
-pyControl D-series Breakout
-+++++++++++++++++++++++++++
-- `Github repository <https://github.com/Karpova-Lab/pyControl-D-series-Breakout>`_ 
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|                       | Breakout Board 1.2                                                | D-Series Breakout Board 1.6                                                    |
++=======================+===================================================================+================================================================================+
+| **Microcontroller**   |                                                                   |                                                                                |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *Board*             | `pyboard v1.1 <https://store.micropython.org/product/PYBv1.1#_>`_ | `pyboard D-series SF6W <https://store.micropython.org/product/PYBD-SF6-W4F2>`_ |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *CPU*               | 168 Mhz Cortex-M4F                                                | 216 MHz Cortex-M7F                                                             |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *RAM*               | 192 KB                                                            | 512 KB                                                                         |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *ROM*               | 512 KB                                                            | 4,048 KB                                                                       |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Connectors**        |                                                                   |                                                                                |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *RJ45*              | 6                                                                 | 12                                                                             |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *BNC*               | 4                                                                 | 0                                                                              |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *USB*               | Full Speed (12 Mbit/s)                                            | High Speed (480 Mbit/s)                                                        |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Behavior Ports**    |                                                                   |                                                                                |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *Power Driver Pins* | 14                                                                | 24                                                                             |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *Digital I/O Pins*  | 14                                                                | 30                                                                             |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *ADC Pins*          | 12                                                                | 15                                                                             |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *DAC Pins*          | 2                                                                 | 2                                                                              |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *UART Buses*        | 3                                                                 | 4                                                                              |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *I2C Buses*         | 2                                                                 | 2                                                                              |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| **Dimensions**        |                                                                   |                                                                                |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|   *PCB*               | 1.8 in x 7.6 in                                                   | 2.7 in x 3.6 in                                                                |
++-----------------------+-------------------------------------------------------------------+--------------------------------------------------------------------------------+
 
 .. toctree::
+    :maxdepth: 2
     :hidden:
 
-    index.rst
+    build.rst
+    using.rst
+    further.rst
