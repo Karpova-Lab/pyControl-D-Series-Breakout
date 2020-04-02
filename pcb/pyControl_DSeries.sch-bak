@@ -798,6 +798,10 @@ Wire Wire Line
 Wire Wire Line
 	3450 2450 3500 2450
 Wire Wire Line
+	3450 2550 3500 2550
+Wire Wire Line
+	3450 2650 3500 2650
+Wire Wire Line
 	3450 2750 3500 2750
 Wire Wire Line
 	3450 2850 3500 2850
@@ -805,7 +809,7 @@ Wire Wire Line
 	3450 2950 3500 2950
 Text Label 3450 2250 2    50   ~ 0
 T1_DB
-Text Label 3450 2550 2    50   ~ 0
+Text Label 3450 2650 2    50   ~ 0
 T2_DB
 Text Label 3450 2750 2    50   ~ 0
 T2_DA
@@ -859,7 +863,7 @@ Text Label 7550 5750 3    50   ~ 0
 B5_PA
 Text Label 3450 2450 2    50   ~ 0
 T1_DA
-Text Label 3450 2650 2    50   ~ 0
+Text Label 3450 2550 2    50   ~ 0
 T2_DC
 Text Label 1050 2250 2    50   ~ 0
 T3_DC
@@ -1205,8 +1209,4 @@ F 4 "12-port RJ45 Connector" H 5750 4950 50  0001 C CNN "Description"
 	1    5750 4950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3500 2550 3450 2550
-Wire Wire Line
-	3500 2650 3450 2650
 $EndSCHEMATC
