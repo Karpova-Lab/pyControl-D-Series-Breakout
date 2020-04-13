@@ -59,7 +59,7 @@ You're now ready to the the D-series Breakout board.
 3. Connect the breakout board to your computer with the USB
 
 .. image:: images/plugged_in.jpg
-    :height: 300px
+    :width: 100%
     :align: center
 
 
@@ -81,7 +81,7 @@ The following instructions will enable you to run the ``hardware_test.py`` task 
 
 #. Download the latest version of `pyControl <https://github.com/pyControl/code/releases>`_ 
 #. Download :download:`_breakout_dseries_1_6.py <_breakout_dseries_1_6.py>` and place it in the ``devices\`` directory
-#. Download :download:`new_hardware_definition.py <_breakout_dseries_1_6.py>` and place it in the ``config\`` directory
+#. Download :download:`new_hardware_definition.py <new_hardware_definition.py>` and place it in the ``config\`` directory
 
 .. code:: 
 

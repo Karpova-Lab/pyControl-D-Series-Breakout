@@ -19,7 +19,6 @@ What is this?
 
 pyControl D-series breakout is a device that connects a `pyboard D-series microcontroller <https://pybd.io/hw/pybd_sfxw.html>`_  with twelve RJ45 ports. 
 It is intended for use with the `pyControl <https://pycontrol.readthedocs.io/en/latest/>`_ behavioral experiment control framework.
-It accomplishes this by using a microcontroller running `Micropython <https://micropython.org/>`_  and having the RJ45 connections that are pin compatible with `pyControl Devices <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-boards>`_.
 
 How is it different?
 --------------------
@@ -29,7 +28,7 @@ How is it different?
 
     pyControl Breakout Board 1.2 (left) and D-series Breakout (right)
 
-The core distinction between this breakout board and the official `pyControl breakout board 1.2 <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12>`_  is the use of a newer generation pyboard. 
+The core distinction between this breakout board and the official `pyControl breakout board 1.2 <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12>`_  is the upgrade to a newer generation pyboard. 
 Some benefits of the newer pyboard include being smaller, faster, having more memory, and having more input/output pins.
 Having more available pins is particularly useful, as it enables the breakout board to provide more behavior ports without requiring a `port expander <https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander>`_. Below is a comparison of the two breakout boards.
 
