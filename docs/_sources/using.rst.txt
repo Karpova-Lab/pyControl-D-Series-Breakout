@@ -52,7 +52,7 @@ First Time Setup
 
     This change to **boot.py** is required, otherwise the pyboard won't be found by the pyControl software when it is connected through the breakout board! 
 
-You're now ready to the the D-series Breakout board.
+You are now ready to connect to the D-series Breakout board.
 
 1. Plug the pyBoard onto the breakout board
 2. Plug 12V DC into the breakout board
@@ -63,13 +63,25 @@ You're now ready to the the D-series Breakout board.
     :align: center
 
 
-Connecting Device Hardware To The Breakout Board
-++++++++++++++++++++++++++++++++++++++++
+Connecting Peripheral Devices To The Breakout Board
++++++++++++++++++++++++++++++++++++++++++++++++++++
 Refer to the table below when considering where to plug in devices. Fill up the top row first with standard devices that just need inputs or outputs. Use the second row for devices that require special communication (UART or I\ :sup:`2`\ C).
 
-.. figure:: _static/pinouts.png
+.. note:: 
+    The pyBoard microcontroller is limited to 16 seperate interrupt vectors (https://forum.micropython.org/viewtopic.php?t=2271). 
+    All pins on the top row of the breakout board (Ports 1-6) are on separate interrupt vectors, so if you have a lot of input devices, plug them into the top row where there is a guarantee of no interrupt vectore collisions.
+
+.. note::
+    If you need to connect to a peripheral using SPI, take a look at Micropython's `machine.SoftSPI <https://docs.micropython.org/en/latest/library/machine.SPI.html>`_.
+
+    The hardware SPI pins are unfortunately not grouped together on a single RJ45 jack on this breakout board, but instead are split up among multiple ports. 
+    If you absolutely need to access the hardware SPI pins, you can plug in multiple `port adapters <https://open-ephys.org/pycontrol/pycontrol-peripherals>`_ to expose the pins. 
+    Information on which hardware SPI pins are where can be found in :download:`this spreadsheet <spi_ports.xlsx>` 
+
+
+.. figure:: _static/pinouts.jpg
     :align: center
-    :target: _static/pinouts.png
+    :target: _static/pinouts.jpg
     
     Mapping of of pins to ports (click to enlarge)
 

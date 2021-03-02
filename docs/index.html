@@ -1,39 +1,42 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>D-series Breakout for pyControl &mdash; D-series Breakout 0.0.1 documentation</title>
   
 
   
-  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my.css" type="text/css" />
+
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/my.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Building" href="build.html" /> 
@@ -70,6 +73,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     <a href="#">Overview</a>
@@ -89,7 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="using.html">Using</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="using.html#what-to-get">What To Get</a></li>
 <li class="toctree-l2"><a class="reference internal" href="using.html#first-time-setup">First Time Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#connecting-device-hardware-to-the-breakout-board">Connecting Device Hardware To The Breakout Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using.html#connecting-peripheral-devices-to-the-breakout-board">Connecting Peripheral Devices To The Breakout Board</a></li>
 <li class="toctree-l2"><a class="reference internal" href="using.html#example-task">Example Task</a></li>
 </ul>
 </li>
@@ -105,6 +109,7 @@
           
   
         </div>
+        
       </div>
     </nav>
 
@@ -152,7 +157,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <!-- User defined GitHub URL -->
               <a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout" class="fa fa-github"> View GitHub Repo</a>
@@ -216,7 +221,7 @@ Having more available pins is particularly useful, as it enables the breakout bo
 <td><p><a class="reference external" href="https://store.micropython.org/product/PYBD-SF6-W4F2">pyboard D-series SF6W</a></p></td>
 </tr>
 <tr class="row-even"><td><p><em>CPU</em></p></td>
-<td><p>168 Mhz Cortex-M4F</p></td>
+<td><p>168 MHz Cortex-M4F</p></td>
 <td><p>216 MHz Cortex-M7F</p></td>
 </tr>
 <tr class="row-odd"><td><p><em>RAM</em></p></td>
@@ -281,7 +286,31 @@ Having more available pins is particularly useful, as it enables the breakout bo
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="documenation-outline">
+<h2>Documenation Outline<a class="headerlink" href="#documenation-outline" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="build.html#cad">CAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build.html#printed-circuit-board">Printed Circuit Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build.html#bill-of-materials">Bill of Materials</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">Using</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using.html#what-to-get">What To Get</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using.html#first-time-setup">First Time Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using.html#connecting-peripheral-devices-to-the-breakout-board">Connecting Peripheral Devices To The Breakout Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using.html#example-task">Example Task</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="further.html">Further Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="further.html#pycontrol">pyControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="further.html#micropython-and-pyboard-d-series">MicroPython and Pyboard D-series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="further.html#pycontrol-d-series-breakout">pyControl D-series Breakout</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -291,30 +320,31 @@ Having more available pins is particularly useful, as it enables the breakout bo
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="build.html" class="btn btn-neutral float-right" title="Building" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
+        <a href="build.html" class="btn btn-neutral float-right" title="Building" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Andy Lustig
+        &#169; Copyright 2021, Andy Lustig.
       <span class="lastupdated">
-        Last updated on Apr 13, 2020.
+        Last updated on Mar 02, 2021.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -322,7 +352,6 @@ Having more available pins is particularly useful, as it enables the breakout bo
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

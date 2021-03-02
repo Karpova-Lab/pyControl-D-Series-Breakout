@@ -1,39 +1,42 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Using &mdash; D-series Breakout 0.0.1 documentation</title>
   
 
   
-  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/my.css" type="text/css" />
+
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/my.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Further Resources" href="further.html" />
@@ -71,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     <a href="index.html">Overview</a>
@@ -90,7 +94,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Using</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-to-get">What To Get</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#first-time-setup">First Time Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#connecting-device-hardware-to-the-breakout-board">Connecting Device Hardware To The Breakout Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-peripheral-devices-to-the-breakout-board">Connecting Peripheral Devices To The Breakout Board</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example-task">Example Task</a></li>
 </ul>
 </li>
@@ -106,6 +110,7 @@
           
   
         </div>
+        
       </div>
     </nav>
 
@@ -153,7 +158,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <!-- User defined GitHub URL -->
               <a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout" class="fa fa-github"> View GitHub Repo</a>
@@ -254,7 +259,7 @@
 </div>
 <p>This change to <strong>boot.py</strong> is required, otherwise the pyboard won’t be found by the pyControl software when it is connected through the breakout board!</p>
 </div>
-<p>You’re now ready to the the D-series Breakout board.</p>
+<p>You are now ready to connect to the D-series Breakout board.</p>
 <ol class="arabic simple">
 <li><p>Plug the pyBoard onto the breakout board</p></li>
 <li><p>Plug 12V DC into the breakout board</p></li>
@@ -262,11 +267,23 @@
 </ol>
 <a class="reference internal image-reference" href="_images/plugged_in.jpg"><img alt="_images/plugged_in.jpg" class="align-center" src="_images/plugged_in.jpg" style="width: 100%;" /></a>
 </div>
-<div class="section" id="connecting-device-hardware-to-the-breakout-board">
-<h2>Connecting Device Hardware To The Breakout Board<a class="headerlink" href="#connecting-device-hardware-to-the-breakout-board" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="connecting-peripheral-devices-to-the-breakout-board">
+<h2>Connecting Peripheral Devices To The Breakout Board<a class="headerlink" href="#connecting-peripheral-devices-to-the-breakout-board" title="Permalink to this headline">¶</a></h2>
 <p>Refer to the table below when considering where to plug in devices. Fill up the top row first with standard devices that just need inputs or outputs. Use the second row for devices that require special communication (UART or I<sup>2</sup>C).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The pyBoard microcontroller is limited to 16 seperate interrupt vectors (<a class="reference external" href="https://forum.micropython.org/viewtopic.php?t=2271">https://forum.micropython.org/viewtopic.php?t=2271</a>).
+All pins on the top row of the breakout board (Ports 1-6) are on separate interrupt vectors, so if you have a lot of input devices, plug them into the top row where there is a guarantee of no interrupt vectore collisions.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need to connect to a peripheral using SPI, take a look at Micropython’s <a class="reference external" href="https://docs.micropython.org/en/latest/library/machine.SPI.html">machine.SoftSPI</a>.</p>
+<p>The hardware SPI pins are unfortunately not grouped together on a single RJ45 jack on this breakout board, but instead are split up among multiple ports.
+If you absolutely need to access the hardware SPI pins, you can plug in multiple <a class="reference external" href="https://open-ephys.org/pycontrol/pycontrol-peripherals">port adapters</a> to expose the pins.
+Information on which hardware SPI pins are where can be found in <a class="reference download internal" download="" href="_downloads/b0ab3476e688ba8a6ecc3ec7d91a358c/spi_ports.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">this</span> <span class="pre">spreadsheet</span></code></a></p>
+</div>
 <div class="figure align-center" id="id5">
-<a class="reference external image-reference" href="_static/pinouts.png"><img alt="_images/pinouts.png" src="_images/pinouts.png" /></a>
+<a class="reference external image-reference" href="_static/pinouts.jpg"><img alt="_images/pinouts.jpg" src="_images/pinouts.jpg" /></a>
 <p class="caption"><span class="caption-text">Mapping of of pins to ports (click to enlarge)</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default">
@@ -309,32 +326,32 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="further.html" class="btn btn-neutral float-right" title="Further Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="build.html" class="btn btn-neutral float-left" title="Building" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="further.html" class="btn btn-neutral float-right" title="Further Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="build.html" class="btn btn-neutral float-left" title="Building" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Andy Lustig
+        &#169; Copyright 2021, Andy Lustig.
       <span class="lastupdated">
-        Last updated on Apr 13, 2020.
+        Last updated on Mar 02, 2021.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -342,7 +359,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

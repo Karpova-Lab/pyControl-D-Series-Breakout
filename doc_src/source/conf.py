@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'D-series Breakout'
-copyright = '2019, Andy Lustig'
+copyright = '2021, Andy Lustig'
 author = 'Andy Lustig'
 
 # The short X.Y version
