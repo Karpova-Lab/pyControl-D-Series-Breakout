@@ -18,3 +18,8 @@ fp-info-cache
 settings.json
 doc_src/build
 pcb/manufacturing
+benchmarking/csv_data
+benchmarking/npy_data
+benchmarking/.ipynb_checkpoints
+benchmarking/~$results.xlsx
+*.dwf3work
