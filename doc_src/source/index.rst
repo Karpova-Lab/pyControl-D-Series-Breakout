@@ -14,6 +14,9 @@ D-series Breakout for pyControl
 .. image:: images/board_top.jpg
     :width: 49%
 
+.. image:: images/diagram.png
+    :width: 100%
+
 What is this?
 -------------
 

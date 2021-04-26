@@ -61,7 +61,7 @@ Bill of Materials
 
 .. raw:: html
 
-  <div style="text-align:center; margin-bottom:24px">
+  <div style="text-align:left; margin-bottom:24px">
     <a href="_static/pyControl_DSeries_1.6.html" style="background-color: #2980b9;
     border: none;
     color: white;

@@ -121,7 +121,7 @@ The following instructions will enable you to run the ``hardware_test.py`` task 
     :align: center
 
 8. From the task dropdown, select "hardware_test", then click "Upload".
-#. Click "Start". The houslight should turn on and nosepokes will now respond to pokes.
+#. Click "Start". The houselight should turn on and nosepokes will now respond to pokes.
 
 .. image:: images/task_running.png
     :align: center
