@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.83.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Building #     Printed Circuit Board #  Schematic:    Layout:       dseries_breakout_gerber.zip    Bill of Materials #  View interactive BOM     Qty Reference Description Value/MPN     2 C1, C2 1206 Capacitor 10µF   1 D1 Schottky Diode MBR120VLSFT3G   1 J1 Micro USB Socket 10118194-0001LF   1 J2 12-port RJ45 Connector 5569263-1   1 J3 Barrel Jack Connector PJ-037A   1 S1 Large Tactile Switch TL3300DF160Q   1 S2 Small Tactile Switch B3FS-1010P   1 U2 5V DC to DC Converter R-78E5.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="Building #     Printed Circuit Board #  Schematic:    Layout:       dseries_breakout_gerber.zip    Bill of Materials #  View interactive BOM     Qty Reference Description Value/MPN     2 C1, C2 1206 Capacitor 10µF   1 D1 Schottky Diode MBR120VLSFT3G   1 J1 Micro USB Socket 10118194-0001LF   1 J2 12-port RJ45 Connector 5569263-1   1 J3 Barrel Jack Connector PJ-037A   1 S1 Large Tactile Switch TL3300DF160Q   1 S2 Small Tactile Switch B3FS-1010P   1 U2 5V DC to DC Converter R-78E5." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karpova-lab.github.io/pyControl-D-Series-Breakout/building/" /><meta property="article:section" content="" />
+
+
+
+<title>Building | D-series Breakout for pyControl</title>
+<link rel="manifest" href="/pyControl-D-Series-Breakout/manifest.json">
+<link rel="icon" href="/pyControl-D-Series-Breakout/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/pyControl-D-Series-Breakout/book.min.f595ea1b61558d959b1b9c742c20a3623db749f04ea376d3e136eff1128da86c.css" integrity="sha256-9ZXqG2FVjZWbG5x0LCCjYj23SfBOo3bT4Tbv8RKNqGw="><!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  <script src="https://kit.fontawesome.com/622646117d.js" crossorigin="anonymous"></script>
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/pyControl-D-Series-Breakout"><span>D-series Breakout for pyControl</span>
+  </a>
+</h2>
+
+
+
+
+<div style="border-top: 1px solid #d3d3d3; padding-top:10px; width: 75%;"></div>
+
+
+
+
+
+
+
+  <ul>
+<li><a href="/pyControl-D-Series-Breakout/">Overview</a></li>
+<li><a href="/pyControl-D-Series-Breakout/building/"class=active>Building</a></li>
+<li><a href="/pyControl-D-Series-Breakout/using/">Using</a></li>
+<li><a href="/pyControl-D-Series-Breakout/further/">Further Resources</a>
+<br /></li>
+</ul>
+
+
+
+
+
+
+
+
+
+<div style="border-top: 1px solid #d3d3d3; padding-top:20px; width: 75%;">
+</div>
+<a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout" class="btn-external issue">
+    <i class="fab fa-github"></i>
+      GitHub Repository
+</a>
+<br>
+
+<p class="github_text">Questions? Feedback? Ideas?</p>
+<a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout/discussions" class="btn-external issue">
+    <i class="fas fa-comments"></i>   Add to discussions
+</a>
+
+<p class="github_text">Corrections?</p>
+<a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout/issues/new" class="btn-external issue">
+    <i class="fas fa-edit"></i> Submit an issue 
+</a>
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/pyControl-D-Series-Breakout/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Building</strong>
+
+  <label for="toc-control">
+    
+    <img src="/pyControl-D-Series-Breakout/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#building">Building</a>
+      <ul>
+        <li><a href="#printed-circuit-board">Printed Circuit Board</a></li>
+        <li><a href="#bill-of-materials">Bill of Materials</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="building">
+  Building
+  <a class="anchor" href="#building">#</a>
+</h1>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <!-- begin columns block -->
+<p><img src="render_iso.png" alt="">
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <!-- magic separator, between columns -->
+<p><img src="render_top.png" alt="">
+  </div>
+  
+</div>
+
+<h2 id="printed-circuit-board">
+  Printed Circuit Board
+  <a class="anchor" href="#printed-circuit-board">#</a>
+</h2>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    Schematic:
+<a href="schematic.png">
+<img src="schematic.png" >
+</img>
+</a>
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    Layout:
+<a href="render.png">
+<img src="render.png" >
+</img>
+</a>
+  </div>
+  
+</div>
+
+<p>
+
+
+<a href="dseries_breakout_gerber.zip" download >
+    <i class="fa fa-download"></i> dseries_breakout_gerber.zip
+</a>
+<br></p>
+<a href="https://oshpark.com/shared_projects/lf2ETrxW">
+    <img src="https://oshpark.com/packs/media/images/badge-5f4e3bf4bf68f72ff88bd92e0089e9cf.png" alt="Order from OSH Park"></img>
+</a>
+<h2 id="bill-of-materials">
+  Bill of Materials
+  <a class="anchor" href="#bill-of-materials">#</a>
+</h2>
+
+
+
+  
+  
+
+
+<a  href="pyControl_DSeries_1.6.html"   target="_blank"  class="book-btn">
+  View interactive BOM
+</a>
+
+<table>
+<thead>
+<tr>
+<th>Qty</th>
+<th>Reference</th>
+<th>Description</th>
+<th>Value/MPN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>C1, C2</td>
+<td>1206 Capacitor</td>
+<td><a href="https://www.digikey.com/products/en?keywords=1276-1804-1-ND">10µF</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>D1</td>
+<td>Schottky Diode</td>
+<td><a href="https://www.digikey.com/products/en?keywords=MBR120VLSFT3GOSCT-ND">MBR120VLSFT3G</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>J1</td>
+<td>Micro USB Socket</td>
+<td><a href="https://www.digikey.com/products/en?keywords=609-4618-1-ND">10118194-0001LF</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>J2</td>
+<td>12-port RJ45 Connector</td>
+<td><a href="https://www.digikey.com/products/en?keywords=5569263">5569263-1</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>J3</td>
+<td>Barrel Jack Connector</td>
+<td><a href="https://www.digikey.com/product-detail/en/cui-inc/PJ-037A/CP-037A-ND/1644545">PJ-037A</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>S1</td>
+<td>Large Tactile Switch</td>
+<td><a href="https://www.digikey.com/products/en?keywords=EG4906CT-ND">TL3300DF160Q</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>S2</td>
+<td>Small Tactile Switch</td>
+<td><a href="https://www.digikey.com/products/en?keywords=sw1440ct">B3FS-1010P</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td>U2</td>
+<td>5V DC to DC Converter</td>
+<td><a href="https://www.digikey.com/products/en?keywords=945-2201-ND">R-78E5.0-1.0</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>U3, U4, U5</td>
+<td>8-channel Driver Array</td>
+<td><a href="https://www.digikey.com/products/en?keywords=TBD62083AFNGELCT-ND">TBD62083A</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>X1U1, X2U1</td>
+<td>40-pin Connector</td>
+<td><a href="https://www.digikey.com/products/en?keywords=H124604CT-ND">DF40HC(4.0)-40DS-0.4V(70)</a></td>
+</tr>
+</tbody>
+</table>
+<p>
+
+
+<a class="btn-nav prev" href= https://karpova-lab.github.io/pyControl-D-Series-Breakout/>
+    <i style="font-size: 1rem;">previous</i><br><i class="fas fa-arrow-left"></i> Overview</i>
+</a>
+
+
+
+
+<a class="btn-nav next" href= https://karpova-lab.github.io/pyControl-D-Series-Breakout/using/ >
+    <i style="font-size: 1rem;">next</i><br>Using <i class="fas fa-arrow-right"></i></i>
+</a>
+<br></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#building">Building</a>
+      <ul>
+        <li><a href="#printed-circuit-board">Printed Circuit Board</a></li>
+        <li><a href="#bill-of-materials">Bill of Materials</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

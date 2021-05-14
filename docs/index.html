@@ -1,391 +1,381 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html lang="en" dir="ltr">
+
 <head>
-  <meta charset="utf-8" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>D-series Breakout for pyControl &mdash; D-series Breakout 0.0.1 documentation</title>
-  
+  <meta name="generator" content="Hugo 0.83.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Overview #     What is this? #  pyControl D-series breakout is a device that connects a pyboard D-series microcontroller with twelve RJ45 ports. It is intended for use with the pyControl behavioral experiment control framework.
+How is it different? #  pyControl Breakout Board 1.2 (left) and D-series Breakout (right)
+The core distinction between this breakout board and the official pyControl breakout board 1.2 is the upgrade to a newer generation pyboard.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://karpova-lab.github.io/pyControl-D-Series-Breakout/" />
 
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/my.css" type="text/css" />
+<title> | D-series Breakout for pyControl</title>
+<link rel="manifest" href="/pyControl-D-Series-Breakout/manifest.json">
+<link rel="icon" href="/pyControl-D-Series-Breakout/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/pyControl-D-Series-Breakout/book.min.f595ea1b61558d959b1b9c742c20a3623db749f04ea376d3e136eff1128da86c.css" integrity="sha256-9ZXqG2FVjZWbG5x0LCCjYj23SfBOo3bT4Tbv8RKNqGw="><link rel="alternate" type="application/rss+xml" href="https://karpova-lab.github.io/pyControl-D-Series-Breakout/index.xml" title="D-series Breakout for pyControl" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
 
-  
-  
-
-  
-  
-
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Building" href="build.html" /> 
+  <script src="https://kit.fontawesome.com/622646117d.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="wy-body-for-nav">
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/pyControl-D-Series-Breakout"><span>D-series Breakout for pyControl</span>
+  </a>
+</h2>
 
-   
-  <div class="wy-grid-for-nav">
+
+
+
+<div style="border-top: 1px solid #d3d3d3; padding-top:10px; width: 75%;"></div>
+
+
+
+
+
+
+
+  <ul>
+<li><a href="/pyControl-D-Series-Breakout/"class=active>Overview</a></li>
+<li><a href="/pyControl-D-Series-Breakout/building/">Building</a></li>
+<li><a href="/pyControl-D-Series-Breakout/using/">Using</a></li>
+<li><a href="/pyControl-D-Series-Breakout/further/">Further Resources</a>
+<br /></li>
+</ul>
+
+
+
+
+
+
+
+
+
+<div style="border-top: 1px solid #d3d3d3; padding-top:20px; width: 75%;">
+</div>
+<a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout" class="btn-external issue">
+    <i class="fab fa-github"></i>
+      GitHub Repository
+</a>
+<br>
+
+<p class="github_text">Questions? Feedback? Ideas?</p>
+<a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout/discussions" class="btn-external issue">
+    <i class="fas fa-comments"></i>   Add to discussions
+</a>
+
+<p class="github_text">Corrections?</p>
+<a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout/issues/new" class="btn-external issue">
+    <i class="fas fa-edit"></i> Submit an issue 
+</a>
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/pyControl-D-Series-Breakout/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong></strong>
+
+  <label for="toc-control">
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="#" class="icon icon-home"> D-series Breakout
-          
-
-          
-          </a>
-
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+    <img src="/pyControl-D-Series-Breakout/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
 </div>
 
-          
-        </div>
 
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-    <a href="#">Overview</a>
-    
-            
-            
-              
-            
-            
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="build.html">Building</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="build.html#cad">CAD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="build.html#printed-circuit-board">Printed Circuit Board</a></li>
-<li class="toctree-l2"><a class="reference internal" href="build.html#bill-of-materials">Bill of Materials</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using.html#what-to-get">What To Get</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#first-time-setup">First Time Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#connecting-peripheral-devices-to-the-breakout-board">Connecting Peripheral Devices To The Breakout Board</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#example-task">Example Task</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="further.html">Further Resources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="further.html#pycontrol">pyControl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="further.html#micropython-and-pyboard-d-series">MicroPython and Pyboard D-series</a></li>
-<li class="toctree-l2"><a class="reference internal" href="further.html#pycontrol-d-series-breakout">pyControl D-series Breakout</a></li>
-</ul>
-</li>
-</ul>
-
-            
-          
   
-        </div>
-        
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">D-series Breakout</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
+  <aside class="hidden clearfix">
     
-      <li><a href="#">Docs</a> &raquo;</li>
-        
-      <li>D-series Breakout for pyControl</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            
-              <!-- User defined GitHub URL -->
-              <a href="https://github.com/Karpova-Lab/pyControl-D-series-Breakout" class="fa fa-github"> View GitHub Repo</a>
-            
-          
-        
-      </li>
-    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a>
+      <ul>
+        <li><a href="#what-is-this">What is this?</a></li>
+        <li><a href="#how-is-it-different">How is it different?</a></li>
+      </ul>
+    </li>
   </ul>
+</nav>
 
+
+
+  </aside>
   
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+ 
+      </header>
+
       
-        <a href="build.html" class="btn btn-neutral float-right" title="Building" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
+  <article class="markdown"><h1 id="overview">
+  Overview
+  <a class="anchor" href="#overview">#</a>
+</h1>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <!-- begin columns block -->
+<p><img src="board_iso.jpg" alt="">
   </div>
   
-  <hr/>
+  <div class="flex-even markdown-inner">
+    <img src="board_top.jpg" alt="">
+  </div>
+  
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="d-series-breakout-for-pycontrol">
-<h1>D-series Breakout for pyControl<a class="headerlink" href="#d-series-breakout-for-pycontrol" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="_images/board_iso.jpg"><img alt="_images/board_iso.jpg" src="_images/board_iso.jpg" style="width: 49%;" /></a>
-<a class="reference internal image-reference" href="_images/board_top.jpg"><img alt="_images/board_top.jpg" src="_images/board_top.jpg" style="width: 49%;" /></a>
-<a class="reference internal image-reference" href="_images/diagram.png"><img alt="_images/diagram.png" src="_images/diagram.png" style="width: 100%;" /></a>
-<div class="section" id="what-is-this">
-<h2>What is this?<a class="headerlink" href="#what-is-this" title="Permalink to this headline">¶</a></h2>
-<p>pyControl D-series breakout is a device that connects a <a class="reference external" href="https://pybd.io/hw/pybd_sfxw.html">pyboard D-series microcontroller</a>  with twelve RJ45 ports.
-It is intended for use with the <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/">pyControl</a> behavioral experiment control framework.</p>
-</div>
-<div class="section" id="how-is-it-different">
-<h2>How is it different?<a class="headerlink" href="#how-is-it-different" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id1">
-<img alt="_images/side_by_side.jpg" src="_images/side_by_side.jpg" />
-<p class="caption"><span class="caption-text">pyControl Breakout Board 1.2 (left) and D-series Breakout (right)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<p>The core distinction between this breakout board and the official <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12">pyControl breakout board 1.2</a>  is the upgrade to a newer generation pyboard.
+
+<p><img src="diagram.png" alt="" /></p>
+<h2 id="what-is-this">
+  What is this?
+  <a class="anchor" href="#what-is-this">#</a>
+</h2>
+<p>pyControl D-series breakout is a device that connects a <a href="https://pybd.io/hw/pybd_sfxw.html">pyboard D-series microcontroller</a>  with twelve RJ45 ports.
+It is intended for use with the <a href="https://pycontrol.readthedocs.io/en/latest/">pyControl</a> behavioral experiment control framework.</p>
+<h2 id="how-is-it-different">
+  How is it different?
+  <a class="anchor" href="#how-is-it-different">#</a>
+</h2>
+<p><img src="side_by_side.jpg" alt="" /></p>
+
+
+<p style="text-align:center; margin-top:-20px; font-style:italic;">pyControl Breakout Board 1.2 (left) and D-series Breakout (right)</p>
+<p>The core distinction between this breakout board and the official <a href="https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#breakout-board-12">pyControl breakout board 1.2</a> is the upgrade to a newer generation pyboard.
 Some benefits of the newer pyboard include being smaller, faster, having more memory, and having more input/output pins.
-Having more available pins is particularly useful, as it enables the breakout board to provide more behavior ports without requiring a <a class="reference external" href="https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander">port expander</a>. Below is a comparison of the two breakout boards.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 39%" />
-<col style="width: 47%" />
-</colgroup>
+Having more available pins is particularly useful, as it enables the breakout board to provide more behavior ports without requiring a <a href="https://pycontrol.readthedocs.io/en/latest/user-guide/hardware/#port-expander">port expander</a> Below is a comparison of the two breakout boards.</p>
+<table>
 <thead>
-<tr class="row-odd"><th class="head"></th>
-<th class="head"><p>Breakout Board 1.2</p></th>
-<th class="head"><p>D-Series Breakout Board 1.6</p></th>
+<tr>
+<th></th>
+<th>Breakout Board 1.2</th>
+<th>D-series Breakout Board 1.6</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Microcontroller</strong></p></td>
+<tr>
+<td><strong>Microcontroller</strong></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><em>Board</em></p></td>
-<td><p><a class="reference external" href="https://store.micropython.org/product/PYBv1.1#_">pyboard v1.1</a></p></td>
-<td><p><a class="reference external" href="https://store.micropython.org/product/PYBD-SF6-W4F2">pyboard D-series SF6W</a></p></td>
+<tr>
+<td><em>Board</em></td>
+<td><a href="https://store.micropython.org/product/PYBv1.1#">pyboard v1.1</a></td>
+<td><a href="https://store.micropython.org/product/PYBD-SF6-W4F2">pyboard D-series SF6W</a></td>
 </tr>
-<tr class="row-even"><td><p><em>CPU</em></p></td>
-<td><p>168 MHz Cortex-M4F</p></td>
-<td><p>216 MHz Cortex-M7F</p></td>
+<tr>
+<td><em>CPU</em></td>
+<td>168 MHz Cortex-M4F</td>
+<td>216 MHz Cortex-M7F</td>
 </tr>
-<tr class="row-odd"><td><p><em>RAM</em></p></td>
-<td><p>192 KB</p></td>
-<td><p>512 KB</p></td>
+<tr>
+<td><em>RAM</em></td>
+<td>192 KB</td>
+<td>512 KB</td>
 </tr>
-<tr class="row-even"><td><p><em>ROM</em></p></td>
-<td><p>512 KB</p></td>
-<td><p>4,048 KB</p></td>
+<tr>
+<td><em>ROM</em></td>
+<td>512 KB</td>
+<td>4,048 KB</td>
 </tr>
-<tr class="row-odd"><td><p><strong>Connectors</strong></p></td>
+<tr>
+<td><strong>Connectors</strong></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><em>RJ45</em></p></td>
-<td><p>6</p></td>
-<td><p>12</p></td>
+<tr>
+<td><em>RJ45</em></td>
+<td>6</td>
+<td>12</td>
 </tr>
-<tr class="row-odd"><td><p><em>BNC</em></p></td>
-<td><p>4</p></td>
-<td><p>0</p></td>
+<tr>
+<td><em>BNC</em></td>
+<td>4</td>
+<td>0</td>
 </tr>
-<tr class="row-even"><td><p><em>USB</em></p></td>
-<td><p>Full Speed (12 Mbit/s)</p></td>
-<td><p>High Speed (480 Mbit/s)</p></td>
+<tr>
+<td><em>USB</em></td>
+<td>Full Speed (12 Mbit/s)</td>
+<td>High Speed (480 Mbit/s)</td>
 </tr>
-<tr class="row-odd"><td><p><strong>Behavior Ports</strong></p></td>
+<tr>
+<td><strong>Behavior Ports</strong></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><em>Power Driver Pins</em></p></td>
-<td><p>14</p></td>
-<td><p>24</p></td>
+<tr>
+<td><em>Power Driver Pins</em></td>
+<td>14</td>
+<td>24</td>
 </tr>
-<tr class="row-odd"><td><p><em>Digital I/O Pins</em></p></td>
-<td><p>14</p></td>
-<td><p>30</p></td>
+<tr>
+<td><em>Digital I/O Pins</em></td>
+<td>14</td>
+<td>30</td>
 </tr>
-<tr class="row-even"><td><p><em>ADC Pins</em></p></td>
-<td><p>12</p></td>
-<td><p>15</p></td>
+<tr>
+<td><em>ADC Pins</em></td>
+<td>12</td>
+<td>15</td>
 </tr>
-<tr class="row-odd"><td><p><em>DAC Pins</em></p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
+<tr>
+<td><em>DAC Pins</em></td>
+<td>2</td>
+<td>2</td>
 </tr>
-<tr class="row-even"><td><p><em>UART Buses</em></p></td>
-<td><p>3</p></td>
-<td><p>4</p></td>
+<tr>
+<td><em>UART Buses</em></td>
+<td>3</td>
+<td>4</td>
 </tr>
-<tr class="row-odd"><td><p><em>I2C Buses</em></p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
+<tr>
+<td><em>I2C Buses</em></td>
+<td>2</td>
+<td>2</td>
 </tr>
-<tr class="row-even"><td><p><strong>Dimensions</strong></p></td>
+<tr>
+<td><strong>Dimensions</strong></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><em>PCB</em></p></td>
-<td><p>1.8 in x 7.6 in</p></td>
-<td><p>2.7 in x 3.6 in</p></td>
+<tr>
+<td><em>PCB</em></td>
+<td>1.8 in x 7.6 in</td>
+<td>2.7 in x 3.6 in</td>
 </tr>
-<tr class="row-even"><td><p><strong>Performance</strong></p></td>
+<tr>
+<td><strong>Performance</strong>*</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><em>Latency - No load</em></p></td>
-<td><p>561 ± 16 µs (100% &lt; 1 ms)</p></td>
-<td><p>307 ± 9 µs (100% &lt; 1 ms)</p></td>
+<tr>
+<td><em>Latency - No load</em></td>
+<td>561 ± 16 µs (100% &lt; 1 ms)</td>
+<td>307 ± 9 µs (100% &lt; 1 ms)</td>
 </tr>
-<tr class="row-even"><td><p><em>Latency - High load</em></p></td>
-<td><p>842 ± 293 µs (84.8% &lt; 1 ms)</p></td>
-<td><p>372 ± 95 µs (100% &lt; 1 ms)</p></td>
+<tr>
+<td><em>Latency - High load</em></td>
+<td>842 ± 293 µs (84.8% &lt; 1 ms)</td>
+<td>372 ± 95 µs (100% &lt; 1 ms)</td>
 </tr>
-<tr class="row-odd"><td><p><em>Accuracy - No load</em></p></td>
-<td><p>-210 ± 281 µs (100% &lt; 1 ms)</p></td>
-<td><p>-342 ± 285 µs (100% &lt; 1 ms)</p></td>
+<tr>
+<td><em>Accuracy - No load</em></td>
+<td>-210 ± 281 µs (100% &lt; 1 ms)</td>
+<td>-342 ± 285 µs (100% &lt; 1 ms)</td>
 </tr>
-<tr class="row-even"><td><p><em>Accuracy - High load</em></p></td>
-<td><p>-27 ± 351 µs (99.2% &lt; 1 ms)</p></td>
-<td><p>-361 ± 280 µs (100% &lt; 1 ms)</p></td>
+<tr>
+<td><em>Accuracy - High load</em></td>
+<td>-27 ± 351 µs (99.2% &lt; 1 ms)</td>
+<td>-361 ± 280 µs (100% &lt; 1 ms)</td>
 </tr>
 </tbody>
 </table>
-<img alt="_images/timing_comparison.png" src="_images/timing_comparison.png" />
-<p>More information on performance comparison <a class="reference external" href="https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/benchmarking">here</a>.</p>
-</div>
-<div class="section" id="documenation-outline">
-<h2>Documenation Outline<a class="headerlink" href="#documenation-outline" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="build.html">Building</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="build.html#cad">CAD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="build.html#printed-circuit-board">Printed Circuit Board</a></li>
-<li class="toctree-l2"><a class="reference internal" href="build.html#bill-of-materials">Bill of Materials</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="using.html">Using</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using.html#what-to-get">What To Get</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#first-time-setup">First Time Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#connecting-peripheral-devices-to-the-breakout-board">Connecting Peripheral Devices To The Breakout Board</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using.html#example-task">Example Task</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="further.html">Further Resources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="further.html#pycontrol">pyControl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="further.html#micropython-and-pyboard-d-series">MicroPython and Pyboard D-series</a></li>
-<li class="toctree-l2"><a class="reference internal" href="further.html#pycontrol-d-series-breakout">pyControl D-series Breakout</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
+<p>*More details about the performance comparison <a href="https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/benchmarking">here</a>.</p>
+<p><img src="timing_comparison.png" alt="" /></p>
+
+
+
+<a class="btn-nav next" href= https://karpova-lab.github.io/pyControl-D-Series-Breakout/building/ >
+    <i style="font-size: 1rem;">next</i><br>Building <i class="fas fa-arrow-right"></i></i>
+</a>
+<br>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
 </div>
 
 
-           </div>
-           
-          </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="build.html" class="btn btn-neutral float-right" title="Building" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
-  <hr/>
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a>
+      <ul>
+        <li><a href="#what-is-this">What is this?</a></li>
+        <li><a href="#how-is-it-different">How is it different?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-  <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, Andy Lustig.
-      <span class="lastupdated">
-        Last updated on Apr 26, 2021.
-      </span>
 
-    </p>
-  </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-        </div>
+ 
       </div>
-
-    </section>
-
-  </div>
-  
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
+    </aside>
     
-   
+  </main>
 
+  
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
