@@ -1,18 +1,15 @@
 baseURL = "https://karpova-lab.github.io/pyControl-D-Series-Breakout/"
 languageCode = "en-us"
 title = "D-series Breakout for pyControl"
-publishDir = "../docs"
+publishDir = "../docs/"
 theme = "book"
 
 
 [params]
-  BookSearch = true
+  BookSearch = false
   BookTheme = 'light'
   BookMenuBundle = '/menu'
-  BookRepo =  'https://github.com/Karpova-Lab/syringe-pump'
-
-  BookEditPath = "edit/main/exampleSite"
-  BookComments = true
+  BookRepo =  'https://github.com/Karpova-Lab/pyControl-D-series-Breakout'
   
 
 [markup.goldmark.renderer]

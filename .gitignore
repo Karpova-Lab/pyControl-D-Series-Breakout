@@ -23,3 +23,6 @@ benchmarking/npy_data
 benchmarking/.ipynb_checkpoints
 benchmarking/~$results.xlsx
 *.dwf3work
+pcb/pyControl_DSeries-backups
+Pipfile
+Pipfile.lock

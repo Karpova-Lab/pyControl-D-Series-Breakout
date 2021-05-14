@@ -1,7 +1,7 @@
 ---
 headless: true
 ---
-- [**Overview**]({{< relref "/" >}})
+- [Overview]({{< relref "/" >}})
 - [Building]({{< relref "/building" >}})
 - [Using]({{< relref "/using" >}})
 - [Further Resources]({{< relref "/further" >}})
