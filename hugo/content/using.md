@@ -76,7 +76,7 @@ Information on which hardware SPI pins are where can be found in <a href="spi_po
 The following instructions will enable you to run the ``hardware_test.py`` task file that comes with pyControl. The task uses 3 nosepokes plugged into ports 1-3 and a houselight plugged into port 4.
 
 1. Download the latest version of [pyControl](https://github.com/pyControl/code/releases)
-2. Download {{< download filename="_breakout_dseries_1_6.py" text="_breakout_dseries_1_6.py">}} and place it in the ``devices\`` directory
+2. Download {{< download filename="breakout_dseries_1_6.py" text="breakout_dseries_1_6.py">}} and place it in the ``devices\`` directory
 3. Download {{< download filename="new_hardware_definition.py" text="new_hardware_definition.py">}} and place it in the ``config\`` directory
 
 ```
@@ -85,7 +85,7 @@ The following instructions will enable you to run the ``hardware_test.py`` task 
    ├ config
    │  └─ new_hardware_definition.py
    └─ devices
-      └─ _breakout_dseries_1_6.py
+      └─ breakout_dseries_1_6.py
 ```
 
 <!-- .. #pyControl
