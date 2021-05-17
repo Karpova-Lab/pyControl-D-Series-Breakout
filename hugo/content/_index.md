@@ -5,7 +5,7 @@
 {{< columns >}} <!-- begin columns block -->
 ![](overview/board_iso.jpg)
 <--->
-![](overview/board_top.jpg)
+![](overview/board_top.jpeg)
 {{< /columns >}}
 
 ![](overview/diagram.png)
@@ -18,7 +18,7 @@ It is intended for use with the [pyControl](https://pycontrol.readthedocs.io/en/
 
 ## How is it different?
 
-![](overview/side_by_side.jpg)
+![](overview/side_by_side.jpeg)
 
 {{< caption text="pyControl Breakout Board 1.2 (left) and D-series Breakout (right)" >}}
 
