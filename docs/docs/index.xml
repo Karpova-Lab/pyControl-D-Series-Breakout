@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>D-series Breakout for pyControl</title>
-    <link>https://karpova-lab.github.io/pyControl-D-Series-Breakout/</link>
-    <description>Recent content on D-series Breakout for pyControl</description>
+    <title>Docs on D-series Breakout for pyControl</title>
+    <link>https://karpova-lab.github.io/pyControl-D-Series-Breakout/docs/</link>
+    <description>Recent content in Docs on D-series Breakout for pyControl</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://karpova-lab.github.io/pyControl-D-Series-Breakout/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://karpova-lab.github.io/pyControl-D-Series-Breakout/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://karpova-lab.github.io/pyControl-D-Series-Breakout/docs/building/</link>

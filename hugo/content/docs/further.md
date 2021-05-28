@@ -1,6 +1,8 @@
+---
+weight: 4
+---
 
 # Further Resources
------------------
 
 ## pyControl 
 

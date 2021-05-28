@@ -1,3 +1,6 @@
+---
+weight: 1
+---
 # Building
 
 {{< columns >}} <!-- begin columns block -->
@@ -51,5 +54,5 @@ Layout:
 | 3   | U3, U4, U5 | 8-channel Driver Array | [TBD62083A](https://www.digikey.com/products/en?keywords=TBD62083AFNGELCT-ND)           | 
 | 2   | X1U1, X2U1 | 40-pin Connector       | [DF40HC(4.0)-40DS-0.4V(70)](https://www.digikey.com/products/en?keywords=H124604CT-ND)  | 
 
-{{< previous link="./" text="Overview" >}}
+{{< previous link="../" text="Overview" >}}
 {{< next link="using" text="Using" >}}

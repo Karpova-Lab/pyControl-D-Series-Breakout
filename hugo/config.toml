@@ -8,7 +8,6 @@ theme = "book"
 [params]
   BookSearch = false
   BookTheme = 'light'
-  BookMenuBundle = '/menu'
   BookRepo =  'https://github.com/Karpova-Lab/pyControl-D-series-Breakout'
   
 
