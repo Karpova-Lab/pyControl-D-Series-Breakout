@@ -1,5 +1,9 @@
 ---
 weight: 1
+prev_txt: Overview
+prev_link: ..
+next_txt: Using
+next_link: using
 ---
 # Building
 
@@ -53,6 +57,3 @@ Layout:
 | 1   | U2         | 5V DC to DC Converter  | [R-78E5.0-1.0](https://www.digikey.com/products/en?keywords=945-2201-ND)                | 
 | 3   | U3, U4, U5 | 8-channel Driver Array | [TBD62083A](https://www.digikey.com/products/en?keywords=TBD62083AFNGELCT-ND)           | 
 | 2   | X1U1, X2U1 | 40-pin Connector       | [DF40HC(4.0)-40DS-0.4V(70)](https://www.digikey.com/products/en?keywords=H124604CT-ND)  | 
-
-{{< previous link="../" text="Overview" >}}
-{{< next link="using" text="Using" >}}

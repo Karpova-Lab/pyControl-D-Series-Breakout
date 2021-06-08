@@ -1,5 +1,7 @@
 ---
 weight: 1
+next_txt: Building
+next_link: building
 ---
 # Overview
 
@@ -58,5 +60,3 @@ Having more available pins is particularly useful, as it enables the breakout bo
 
 ![](overview/timing_comparison.png)
 
-
-{{< next link="building" text="Building" >}}

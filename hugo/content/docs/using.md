@@ -1,5 +1,9 @@
 ---
 weight: 2
+prev_txt: Building
+prev_link: building
+next_txt: Further Resources
+next_link: further
 ---
 # Using
 
@@ -109,8 +113,3 @@ The following instructions will enable you to run the ``hardware_test.py`` task 
 9. Click "Start". The houselight should turn on and nosepokes will now respond to pokes.
 
 ![](task_running.png)
-
-
-
-{{< previous link="building" text="Building" >}}
-{{< next link="further" text="Further Resources" >}}

@@ -1,5 +1,8 @@
 ---
+title: Further Resources
 weight: 4
+prev_txt: Using
+prev_link: using
 ---
 
 # Further Resources
@@ -48,8 +51,6 @@ weight: 4
 
 <--->
 
-<img src="board_top.jpg" width="350px"/>
+<img src="board_top.jpeg" width="350px"/>
 
 {{< /columns >}}
-
-{{< previous link="using" text="Using" >}}
