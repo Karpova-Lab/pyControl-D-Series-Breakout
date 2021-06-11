@@ -27,7 +27,7 @@ next_link: further
 
 The breakout board is designed to use the microcontroller's high speed USB interface. We must make a change to ``boot.py`` so that everything works properly https://pybd.io/hw/pybd_sfxw.html#usb-ports.
 
-1. Plug the bare pyBoard D-series into your computer. 
+1. Plug the bare pyboard D-series into your computer. 
 
 ![](board_setup.jpg)
 
@@ -45,24 +45,24 @@ This change to ``boot.py`` is required, otherwise the pyboard won't be found by 
 
 You are now ready to connect to the D-series Breakout board.
 
-1. Plug the pyBoard onto the breakout board
+1. Plug the pyboard onto the breakout board
 2. Plug 12V DC power into the breakout board
 3. Connect the breakout board to your computer with the USB
 
-![](plugged_in.jpg)
+{{< pic file="plugged_in.jpg" >}}
 
 
 ## Connecting Peripheral Devices
 Refer to the table below when considering where to plug in devices. Fill up the top row first with standard devices that just need inputs or outputs. Use the second row for devices that require special communication (UART or I<sup>2</sup>C).
 
 {{< hint info >}}
-### <i class="fas fa-info-circle"></i> Note
-The pyBoard microcontroller is limited to 16 seperate interrupt vectors (https://forum.micropython.org/viewtopic.php?t=2271). 
+### <i class="fas fa-info-circle"></i> Note on interrupts
+The pyboard microcontroller is limited to 16 separate interrupt vectors (https://forum.micropython.org/viewtopic.php?t=2271). 
 All of the DIO pins on the top row of the breakout board (Ports 1-6) are on separate interrupt vectors, so if you have a lot of input devices, plug them into the top row where there is a guarantee of no interrupt vector collisions.
 {{< /hint >}}
 
 {{< hint info >}}
-### <i class="fas fa-info-circle"></i> Note
+### <i class="fas fa-info-circle"></i> Note on SPI
 If you need to connect to a peripheral using SPI, take a look at Micropython's [machine.SoftSPI](https://docs.micropython.org/en/latest/library/machine.SPI.html)
 
 The hardware SPI pins are unfortunately not grouped together on a single RJ45 jack on this breakout board, but instead are split up among multiple ports. 
@@ -77,7 +77,7 @@ Information on which hardware SPI pins are where can be found in <a href="spi_po
 <br>
 {{< caption text="Mapping of pins to ports (click to enlarge)" >}}
 
-![](board_front_labeled.jpg)
+{{< pic file="board_front_labeled.jpg" >}}
 
 ## Example Task
 The following instructions will enable you to run the ``hardware_test.py`` task file that comes with pyControl. The task uses 3 nosepokes plugged into ports 1-3 and a houselight plugged into port 4.
@@ -105,11 +105,11 @@ The following instructions will enable you to run the ``hardware_test.py`` task 
 4. Launch pyControl and press the "Connect" button to connect to the breakout board.
 5. Press the "Config" button and the "Load framework" button. 
 6. Again, press the "Config" button. Press the "Load hardware definition" button and then select "new_hardware_definition.py" to upload.
-7. If succesfull, you should get a couple OK's
+7. If successful, you should get a couple OK's
 
 ![](upload.png)
 
 8. From the task dropdown, select "examples/hardware_test", then click "Upload".
 9. Click "Start". The houselight should turn on and nosepokes will now respond to pokes.
 
-![](task_running.png)
+{{< pic file="task_running.png" >}}

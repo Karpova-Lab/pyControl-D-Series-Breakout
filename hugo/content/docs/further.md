@@ -20,7 +20,7 @@ prev_link: using
 
 <--->
 
-<img src="open_ephys.png" width="350px"/>
+{{< pic file="open_ephys.png" >}}
 
 {{< /columns >}}
 
@@ -51,6 +51,6 @@ prev_link: using
 
 <--->
 
-<img src="board_top.jpeg" width="350px"/>
+{{< pic file="board_top.jpeg" >}}
 
 {{< /columns >}}

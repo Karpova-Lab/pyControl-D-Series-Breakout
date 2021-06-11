@@ -14,7 +14,7 @@
 <title>Using | D-series Breakout for pyControl</title>
 <link rel="manifest" href="/pyControl-D-Series-Breakout/manifest.json">
 <link rel="icon" href="/pyControl-D-Series-Breakout/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/pyControl-D-Series-Breakout/book.min.a43f7b304433884f33d477462fc1b4498e5564e3f5caf83163b4647ebc05ff9e.css" integrity="sha256-pD97MEQziE8z1HdGL8G0SY5VZOP1yvgxY7RkfrwF/54=" crossorigin="anonymous"><!--
+<link rel="stylesheet" href="/pyControl-D-Series-Breakout/book.min.c969c1a25ce0fbdd32c9e0fbda80701b09aa69e01403ce91dc5cb30167218af9.css" integrity="sha256-yWnBolzg&#43;90yyeD72oBwGwmqaeAUA86R3FyzAWchivk=" crossorigin="anonymous"><!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
 -->
@@ -50,6 +50,9 @@ https://github.com/alex-shpak/hugo-book
 
   
   <ul>
+    <li>
+      <a href= "/pyControl-D-Series-Breakout/" class="">Overview</a>
+    </li>
     
       
         <li>
@@ -251,38 +254,43 @@ https://github.com/alex-shpak/hugo-book
   <h3 id="i-classfas-fa-exclamation-trianglei-attention"><i class="fas fa-exclamation-triangle"></i> <strong>Attention</strong></h3>
 <p>The breakout board is designed to use the microcontroller&rsquo;s high speed USB interface. We must make a change to <code>boot.py</code> so that everything works properly <a href="https://pybd.io/hw/pybd_sfxw.html#usb-ports">https://pybd.io/hw/pybd_sfxw.html#usb-ports</a>.</p>
 <ol>
-<li>Plug the bare pyBoard D-series into your computer.</li>
+<li>Plug the bare pyboard D-series into your computer.</li>
 </ol>
 <p><img src="board_setup.jpg" alt=""></p>
 <ol start="2">
 <li>It should appear as a flash drive on your computer. Edit the <code>boot.py</code> file to have the following:</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020;font-weight:bold">import</span> <span style="color:#0e84b5;font-weight:bold">pyb</span>
-pyb<span style="color:#666">.</span>usb_mode(<span style="color:#4070a0">&#39;VCP&#39;</span>,port<span style="color:#666">=</span><span style="color:#40a070">1</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pyb
+pyb<span style="color:#f92672">.</span>usb_mode(<span style="color:#e6db74">&#39;VCP&#39;</span>,port<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
 </code></pre></div><p>This change to <code>boot.py</code> is required, otherwise the pyboard won&rsquo;t be found by the pyControl software when it is connected through the breakout board!</p>
 
 </blockquote>
 
 <p>You are now ready to connect to the D-series Breakout board.</p>
 <ol>
-<li>Plug the pyBoard onto the breakout board</li>
+<li>Plug the pyboard onto the breakout board</li>
 <li>Plug 12V DC power into the breakout board</li>
 <li>Connect the breakout board to your computer with the USB</li>
 </ol>
-<p><img src="plugged_in.jpg" alt="" /></p>
+<p>
+	<a href="plugged_in.jpg">
+		<img src="plugged_in.jpg" ></img>
+	</a>
+</p>
+
 <h2 id="connecting-peripheral-devices">
   Connecting Peripheral Devices
   <a class="anchor" href="#connecting-peripheral-devices">#</a>
 </h2>
 <p>Refer to the table below when considering where to plug in devices. Fill up the top row first with standard devices that just need inputs or outputs. Use the second row for devices that require special communication (UART or I<sup>2</sup>C).</p>
 <blockquote class="book-hint info">
-  <h3 id="i-classfas-fa-info-circlei-note"><i class="fas fa-info-circle"></i> Note</h3>
-<p>The pyBoard microcontroller is limited to 16 seperate interrupt vectors (<a href="https://forum.micropython.org/viewtopic.php?t=2271)">https://forum.micropython.org/viewtopic.php?t=2271)</a>.
+  <h3 id="i-classfas-fa-info-circlei-note-on-interrupts"><i class="fas fa-info-circle"></i> Note on interrupts</h3>
+<p>The pyboard microcontroller is limited to 16 separate interrupt vectors (<a href="https://forum.micropython.org/viewtopic.php?t=2271)">https://forum.micropython.org/viewtopic.php?t=2271)</a>.
 All of the DIO pins on the top row of the breakout board (Ports 1-6) are on separate interrupt vectors, so if you have a lot of input devices, plug them into the top row where there is a guarantee of no interrupt vector collisions.
 </blockquote>
 
 <blockquote class="book-hint info">
-  <h3 id="i-classfas-fa-info-circlei-note"><i class="fas fa-info-circle"></i> Note</h3>
+  <h3 id="i-classfas-fa-info-circlei-note-on-spi"><i class="fas fa-info-circle"></i> Note on SPI</h3>
 <p>If you need to connect to a peripheral using SPI, take a look at Micropython&rsquo;s <a href="https://docs.micropython.org/en/latest/library/machine.SPI.html">machine.SoftSPI</a></p>
 <p>The hardware SPI pins are unfortunately not grouped together on a single RJ45 jack on this breakout board, but instead are split up among multiple ports.
 If you absolutely need to access the hardware SPI pins, you can plug in multiple <a href="https://open-ephys.org/pycontrol/pycontrol-peripherals">port adapters</a> to expose the pins.
@@ -298,7 +306,12 @@ Information on which hardware SPI pins are where can be found in <a href="spi_po
 
 
 <p style="text-align:center; margin-top:-20px; font-style:italic;">Mapping of pins to ports (click to enlarge)</p>
-<p><img src="board_front_labeled.jpg" alt="" /></p>
+<p>
+	<a href="board_front_labeled.jpg">
+		<img src="board_front_labeled.jpg" ></img>
+	</a>
+</p>
+
 <h2 id="example-task">
   Example Task
   <a class="anchor" href="#example-task">#</a>
@@ -334,14 +347,19 @@ Information on which hardware SPI pins are where can be found in <a href="spi_po
 <li>Launch pyControl and press the &ldquo;Connect&rdquo; button to connect to the breakout board.</li>
 <li>Press the &ldquo;Config&rdquo; button and the &ldquo;Load framework&rdquo; button.</li>
 <li>Again, press the &ldquo;Config&rdquo; button. Press the &ldquo;Load hardware definition&rdquo; button and then select &ldquo;new_hardware_definition.py&rdquo; to upload.</li>
-<li>If succesfull, you should get a couple OK&rsquo;s</li>
+<li>If successful, you should get a couple OK&rsquo;s</li>
 </ol>
 <p><img src="upload.png" alt="" /></p>
 <ol start="8">
 <li>From the task dropdown, select &ldquo;examples/hardware_test&rdquo;, then click &ldquo;Upload&rdquo;.</li>
 <li>Click &ldquo;Start&rdquo;. The houselight should turn on and nosepokes will now respond to pokes.</li>
 </ol>
-<p><img src="task_running.png" alt="" /></p>
+<p>
+	<a href="task_running.png">
+		<img src="task_running.png" ></img>
+	</a>
+</p>
+
 </article>
  
       <div class="chapter_btns">
@@ -384,7 +402,7 @@ Information on which hardware SPI pins are where can be found in <a href="spi_po
 
  
         <br>
-These docs were built with <a href="https://gohugo.io/">Hugo</a> using a fork of the <a href="https://github.com/alustig3/hugo-book">Hugo Book Theme</a> as the theme.
+These docs are built with <a href="https://gohugo.io/">Hugo</a> . A fork of <a href="https://github.com/alustig3/hugo-book">Hugo Book</a> is used for the theme.
       </footer>
 
       

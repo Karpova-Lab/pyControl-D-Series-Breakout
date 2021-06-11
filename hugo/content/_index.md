@@ -7,12 +7,12 @@ next_link: building
 
 
 {{< columns >}} <!-- begin columns block -->
-![](overview/board_iso.jpg)
+{{< pic file="overview/board_iso.jpg" >}}
 <--->
-![](overview/board_top.jpeg)
+{{< pic file="overview/board_top.jpeg" >}}
 {{< /columns >}}
 
-![](overview/diagram.png)
+{{< pic file="overview/diagram.png" >}}
 
 
 ## What is this?
@@ -22,7 +22,7 @@ It is intended for use with the [pyControl](https://pycontrol.readthedocs.io/en/
 
 ## How is it different?
 
-![](overview/side_by_side.jpeg)
+{{< pic file="overview/side_by_side.jpeg" >}}
 
 {{< caption text="pyControl Breakout Board 1.2 (left) and D-series Breakout (right)" >}}
 
@@ -58,5 +58,4 @@ Having more available pins is particularly useful, as it enables the breakout bo
 
 *More details about the performance comparison [here](https://github.com/Karpova-Lab/pyControl-D-Series-Breakout/tree/master/benchmarking).
 
-![](overview/timing_comparison.png)
-
+{{< pic file="overview/timing_comparison.png" >}}

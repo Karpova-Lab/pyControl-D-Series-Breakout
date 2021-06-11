@@ -9,29 +9,22 @@ next_link: using
 
 {{< columns >}} <!-- begin columns block -->
 
-![](render_iso.png)
+{{< pic file="render_iso.png" >}}
 
 <---> <!-- magic separator, between columns -->
 
-![](render_top.png)
+{{< pic file="render_top.png" >}}
 
 {{< /columns >}}
-
 
 
 ## Printed Circuit Board
 {{< columns >}}
 Schematic:
-<a href="schematic.png">
-  <img src="schematic.png" >
-  </img>
-</a>
+{{< pic file="schematic.png" >}}
 <--->
 Layout:
-<a href="render.png">
-  <img src="render.png" >
-  </img>
-</a>
+{{< pic file="render.png" >}}
 {{< /columns >}}
 
 {{< download filename="dseries_breakout_gerber.zip" text="dseries_breakout_gerber.zip" >}}
