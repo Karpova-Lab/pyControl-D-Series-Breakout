@@ -45,7 +45,7 @@ prev_link: using
 - [D-series breakout repository](https://github.com/Karpova-Lab/pyControl-D-series-Breakout)
 - [More open hardware repositories](https://github.com/Karpova-Lab?type=source)
     - [Cerebro](https://karpova-lab.github.io/cerebro/)
-    - [Lever](https://karpova-lab.github.io/Lever/)
+    - [Lever](https://karpova-lab.github.io/lever/)
     - [Syringe Pump](https://karpova-lab.github.io/syringe-pump/)
     - [Nosepoke](https://karpova-lab.github.io/nosepoke/)
 
