@@ -1,0 +1,52 @@
+site_name: D-series Breakout for pyControl
+site_description: A breakout board for use with pyControl behavior control framework
+site_author: Andy Lustig
+repo_url: https://github.com/Karpova-Lab/pyControl-D-series-Breakout
+repo_name: Karpova-Lab/pyControl-D-series-Breakout
+edit_uri: ""
+docs_dir: src
+site_dir: ../docs
+
+theme:
+    name: material
+    custom_dir: overrides
+    icon:
+        repo: fontawesome/brands/github
+    palette:
+        # scheme: slate
+        primary: red
+        accent: blue
+    logo: assets/home.svg
+
+plugins:
+    - git-revision-date-localized
+    - search
+
+extra_css:
+    - stylesheets/extra.css
+
+markdown_extensions:
+    - toc:
+        title: On this page
+        permalink: "#"
+        toc_depth: 4
+
+    - admonition
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - attr_list
+    - pymdownx.emoji:
+          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.tabbed:
+          alternate_style: true
+    - pymdownx.details
+    - footnotes
+
+nav:
+    - Overview: index.md
+    - Building: building.md
+    - Using: using.md
+    - Further Resources: further.md
+
+copyright: Copyright &copy; 2022 Andy Lustig

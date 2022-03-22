@@ -1,19 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://karpova-lab.github.io/pyControl-D-Series-Breakout/</loc>
-  </url><url>
-    <loc>https://karpova-lab.github.io/pyControl-D-Series-Breakout/docs/building/</loc>
-  </url><url>
-    <loc>https://karpova-lab.github.io/pyControl-D-Series-Breakout/docs/using/</loc>
-  </url><url>
-    <loc>https://karpova-lab.github.io/pyControl-D-Series-Breakout/docs/further/</loc>
-  </url><url>
-    <loc>https://karpova-lab.github.io/pyControl-D-Series-Breakout/categories/</loc>
-  </url><url>
-    <loc>https://karpova-lab.github.io/pyControl-D-Series-Breakout/docs/</loc>
-  </url><url>
-    <loc>https://karpova-lab.github.io/pyControl-D-Series-Breakout/tags/</loc>
-  </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>None</loc>
+         <lastmod>2022-03-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>None</loc>
+         <lastmod>2022-03-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>None</loc>
+         <lastmod>2022-03-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>None</loc>
+         <lastmod>2022-03-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
