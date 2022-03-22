@@ -1,3 +1,5 @@
 (sym_lib_table
-  (lib (name asl_symbols)(type Legacy)(uri ${KIPRJMOD}/libs/asl_symbols.lib)(options "")(descr ""))
+  (lib (name "asl_symbols")(type "Legacy")(uri "${KIPRJMOD}/libs/asl_symbols.lib")(options "")(descr ""))
+  (lib (name "pyControl_DSeries-rescue")(type "Legacy")(uri "${KIPRJMOD}/pyControl_DSeries-rescue.lib")(options "")(descr "")(disabled))
+  (lib (name "asl_symbols_new")(type "KiCad")(uri "${KIPRJMOD}/libs/asl_symbols_new.kicad_sym")(options "")(descr ""))
 )

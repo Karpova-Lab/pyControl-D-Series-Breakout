@@ -24,5 +24,4 @@ benchmarking/.ipynb_checkpoints
 benchmarking/~$results.xlsx
 *.dwf3work
 pcb/pyControl_DSeries-backups
-Pipfile
-Pipfile.lock
+pcb/pyControl_DSeries.kicad_prl
