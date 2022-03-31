@@ -24,7 +24,7 @@ li > code{
 .nav_button{
     border:1px solid #ef5552;
     border-radius:5px;
-    padding:3px;
+    padding: 4px;
 }
 .nav_button:hover{
     background-color: #ef5552;
