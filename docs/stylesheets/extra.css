@@ -41,3 +41,21 @@ li > code{
 h2{
     text-decoration: underline;
 }
+
+.md-footer__title{
+    color:black;
+    /* background:grey; */
+}
+
+.md-footer__button {
+    color:black;
+    /* background:grey; */
+}
+
+.md-footer {
+    background-color: white;
+}
+
+.md-footer-meta {
+    background-color: var(--md-footer-bg-color);
+}

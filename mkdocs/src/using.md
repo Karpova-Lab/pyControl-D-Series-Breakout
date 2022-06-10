@@ -41,7 +41,7 @@ You are now ready to connect to the D-series Breakout board.
 Refer to the table below when considering where to plug in devices. Fill up the top row first with standard devices that just need inputs or outputs. Use the second row for devices that require special communication (UART or I<sup>2</sup>C).
 
 ???+ note "Note on interrupts"
-    The pyboard microcontroller is limited [to 16 separate interrupt vectors](https://forum.micropython.org/viewtopic.php?t=2271). 
+    The pyboard microcontroller is limited to [16 separate interrupt vectors](https://forum.micropython.org/viewtopic.php?t=2271). 
     All of the DIO pins on the top row of the breakout board (Ports 1-6) are on separate interrupt vectors, so if you have a lot of input devices, plug them into the top row where there is a guarantee of no interrupt vector collisions.
 
 ???+ note "Note on SPI"
