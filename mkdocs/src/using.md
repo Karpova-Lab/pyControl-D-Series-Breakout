@@ -8,7 +8,7 @@
 | 1 | pyboard D-series Microcontroller | [Micropython](https://store.micropython.org/category/pyboard%20D-series)   | Yes      |
 | 1 | 12V DC Power Supply              | [Digi-Key](https://www.digikey.com/products/en?keywords=102-3631-ND) | Yes      |
 | 1 | USB cable                        | [Digi-Key](https://www.digikey.com/products/en?keywords=380-1431-ND) | Yes      |
-| 1 | DIN Rail                         | [Digi-Key](https://www.digikey.com/short/prn3bb)                     |          |
+| 1 | DIN Rail                         | [Digi-Key](https://www.digikey.com/short/q8mq0f3n)                   |          |
 | 2 | DIN Rail Adapter                 | [Digi-Key](https://www.digikey.com/products/en?keywords=277-2296-nd) |          |
 | 4 | M3 screws                        | [Digi-Key](https://www.digikey.com/products/en?keywords=335-1156-ND) |          |
 

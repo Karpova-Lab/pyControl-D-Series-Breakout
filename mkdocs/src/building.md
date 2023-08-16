@@ -24,9 +24,7 @@
 
 [:material-file-download: dseries_breakout_gerber.zip](building/dseries_breakout_gerber.zip)
 
-<a href="https://oshpark.com/shared_projects/lf2ETrxW">
-    <img src="https://oshpark.com/packs/media/images/badge-5f4e3bf4bf68f72ff88bd92e0089e9cf.png" alt="Order from OSH Park"></img>
-</a>
+[Order PCB from OSH Park](https://oshpark.com/shared_projects/lf2ETrxW)
 
 ## Bill of Materials
 
