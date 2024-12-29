@@ -16,7 +16,7 @@ theme:
         # scheme: slate
         primary: teal
         accent: grean
-    logo: _home.svg
+    logo: custom/home.svg
     features:
         - navigation.footer
 
@@ -25,7 +25,7 @@ plugins:
     - search
 
 extra_css:
-    - _extra.css
+    - custom/extra.css
 
 markdown_extensions:
     - toc:
