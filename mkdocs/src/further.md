@@ -4,7 +4,7 @@
 
 
 - [Official pyControl documentation](https://pycontrol.readthedocs.io/en/latest/) 
-- [pyControl Google groups forum](https://groups.google.com/forum/#!forum/pycontrol) 
+- [pyControl forum](https://github.com/orgs/pyControl/discussions) 
 - [pyControl on GitHub](https://github.com/pyControl) 
 - Purchase ready to use pyControl hardware at the [Open Ephys Store](http://www.open-ephys.org/pycontrol) or [Labmaker](https://www.labmaker.org/collections/neuroscience/products/pycontrol-mouse-behaviour-box_set_no1)
 

@@ -22,12 +22,12 @@ li > code{
 }
 
 .nav_button{
-    border:1px solid #ef5552;
+    border:1px solid teal;
     border-radius:5px;
     padding: 4px;
 }
 .nav_button:hover{
-    background-color: #ef5552;
+    background-color: teal;
     color: white;
     fill: white;
 }
@@ -40,6 +40,10 @@ li > code{
 
 h2{
     text-decoration: underline;
+}
+
+h3{
+    font-style: italic;
 }
 
 .md-footer__title{
@@ -55,6 +59,25 @@ h2{
 .md-footer {
     background-color: white;
 }
+
+.md-footer__link{
+    border: 1px solid teal;
+    border-radius: 10px;
+
+}
+.md-footer__link:hover{
+    background-color: teal;
+    opacity: 1;
+}
+
+.md-footer__link:hover .md-footer__title{
+    color: white;
+}
+
+.md-footer__link:hover .md-footer__button{
+    color: white;
+}
+
 
 .md-footer-meta {
     background-color: var(--md-footer-bg-color);

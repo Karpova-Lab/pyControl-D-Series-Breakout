@@ -4,7 +4,7 @@
 
 | Qty | Description                    | Order Link                                                           | Required |
 |---|----------------------------------|----------------------------------------------------------------------|----------|
-| 1 | D-series Breakout Board          | [Build your own](building.md#syringe-control-board-for-pycontrol)    | Yes      |
+| 1 | D-series Breakout Board          | [Build your own](building.md#printed-circuit-board)    | Yes      |
 | 1 | pyboard D-series Microcontroller | [Micropython](https://store.micropython.org/category/pyboard%20D-series)   | Yes      |
 | 1 | 12V DC Power Supply              | [Digi-Key](https://www.digikey.com/products/en?keywords=102-3631-ND) | Yes      |
 | 1 | USB cable                        | [Digi-Key](https://www.digikey.com/products/en?keywords=380-1431-ND) | Yes      |
